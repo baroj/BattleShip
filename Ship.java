@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
 /**
  *Class responsible for generating ships and randomly placing them on the map.
@@ -19,51 +14,120 @@ public class Ship extends Tester {
     public void createShip(Board board, int size) {
     	//I changed it to 3 ships to simplify things
     	//******************************************
+    	shipSize = size;
         for (int j = 0; j < shipCount; j++) {
-
-        	//Random number determines whether ship is placed horizontally or vertically    	
-            if (Math.random() < 0.5) {	//Places ship on map horizontally
-            	System.out.println("Creating Ship:\nRandom # < .5");
+        	double orientation = Math.random();	//Random number determines whether ship is placed horizontally or vertically    	
+            if (orientation < 0.5) {
+            	System.out.println("Creating Ship:\nRandom # < .5 = Horizontal Ship");
             	int col = (int) (Math.random() * 5);				
                 int row = (int) (Math.random() * 7);	
-                System.out.println((col+1) + "\n" + (row+1));
-                for (int i = 0; i < size; i++) {
-                    board.grid[row][col + i] = "S";
+                System.out.println((row+1) + "," + (col+1));
 
+                
+                if(isValidShipPlacement(board, row, col, orientation)){
+                	System.out.println("This is valid, placing on grid now...");
+                	placeShip(board, row, col, orientation);                 	
                 }
-            } else {	//else random > .5 -> Places ship on map vertically
-            	System.out.println("Creating Ship:\nRandom # > .5");
+                else{
+                	System.out.println("This is not valid, getting new selection now...");
+                	j--;	
+                }
+            } 
+        
+        	else {	//else random > .5 -> Places ship on map vertically
+        		System.out.println("Creating Ship:\nRandom # > .5 = Vertical Ship");
                 int col = (int) (Math.random() * 7);	
                 int row = (int) (Math.random() * 5);	
-                System.out.println((col+1) + "\n" + (row+1));
-                for (int i = 0; i < size; i++) {
-                    board.grid[row + i][col] = "S";
-
+                System.out.println((row+1) + "," + (col+1));
+                
+                if(isValidShipPlacement(board, row, col, orientation)){
+                	System.out.println("This is valid, placing on grid now...");
+                	placeShip(board, row, col, orientation);                 	
                 }
+                else{
+                	System.out.println("This is not valid, getting new selection now...");
+                	j--;	
+                }         
             }
         }
     }
 
     
     /**
-     * Counts the total number of shots fired that have hit a ship.
-     * @param board The current board being checked for ship hits.
-     * @return Total number of hits.
+     * Checks to see if this a valid ship selection.
+     * @param board Game board being checked.
+     * @param row Beginning row.
+     * @param col Beginning column.
+     * @param orientation Random number that determines horizontal vs. vertical orientation
+     * @return True if this is a valid ship placement.
      */
-    public int Counter(Board board) {
-        hitCount = 0;
-        for (int j = 0; j < board.getSize(); j++) {
-            for (int k = 0; k < board.grid[j].length; k++) {
-                if (board.grid[j][k].equals("S")) {
-                    hitCount++;
-                }
+    public boolean isValidShipPlacement(Board board, int row, int col, double orientation){
+    	if (orientation < 0.5){	//if orientation is horizontal
+    		for(int i = 0; i < shipSize; i++){   		
+    			if(board.grid[row][col + i].equals("S")){
+    				return false;
+    			}
+    		}
+    	return true;
+    	}	
+    	
+    	else{	//else orientation is vertical
+    		for(int i = 0; i < shipSize; i++){   		
+    			if(board.grid[row + 1][col].equals("S")){
+    				return false;
+    			}
+    		}
+		return true;    		
+    	}
+    }
+    
+    /**
+     * Places the ship selection at this point on the map.
+     * @param board Game board being changed.
+     * @param row Beginning row for ship placement.
+     * @param col Beginning column for ship placement.
+     * @param orientation
+     */
+    public void placeShip(Board board, int row, int col, double orientation){
+    	if(orientation < 0.5){
+    		for(int i = 0; i < shipSize; i++){
+    			board.grid[row][col + i] = "S";
+    		}   	
+    	}
+    	else{
+    		for (int i = 0; i < shipSize; i++) {
+    			board.grid[row + i][col] = "S";
             }
-        }
-        return hitCount;
+    	}    	
+    }
+    
+    /**
+     * 
+     * @return The total number of ships on game board.
+     */
+    public int getShipCount(){
+    	return shipCount;
+    }
+    
+    /**
+     * 
+     * @return The length of each ship.
+     */
+    public int getShipSize(){
+    	return shipSize;
+    }
+    
+    /**
+     * 
+     * @return Total number of hits required to win a game.
+     */
+    public int hitsRequired(){
+    	return shipSize * shipCount;
     }
     
     
-    private int hitCount;
+    
+    private int shipSize;
     private int shipCount = 3;
     
 }
