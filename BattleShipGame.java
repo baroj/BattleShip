@@ -1,24 +1,9 @@
 /**
- * 
+ * Class for constructing new BattleShip games, playing games, and displaying end of game results.
  * @author Jonathan and Justin
  *
  */
 public class BattleShipGame {
-
-		//construct a user game board and display
-    //
-    //System.out.println("Displaying User Board");
-    //userBoard.displayShips();
-			//construct a computer game board and display
-    //compBoard.createShip(compBoard, 4);
-    //System.out.println("Displaying Computer Board");
-    //compBoard.displayShips();
-    
- 
-	
-	
-	
-	
 	
 	/**
 	 * Construct game boards and players accordingly.
@@ -43,8 +28,8 @@ public class BattleShipGame {
 	 * Take turns firing until there is a winner.
 	 */
 	public void playGame(){        										
-		while ((user.getHits() < userBoard.Counter(userBoard)) &&	//while there is no winner!
-        		(comp.getHits() < compBoard.Counter(compBoard))){	//PLAY BATTLESHIP!
+		while ((user.getHits() < userBoard.hitsRequired()) &&	//while there is no winner!
+        		(comp.getHits() < compBoard.hitsRequired())){	//PLAY BATTLESHIP!
         	if(takeTurns){
         		System.out.println("USER'S TURN\nUSER'S GAMEBOARD:");		//display board
             	userBoard.displayBoard();
@@ -75,11 +60,11 @@ public class BattleShipGame {
 	 * Display end of game results.
 	 */
 	public String gameOver(){
-		if(user.getHits() < 4){
-			return "Sorry, but you lost because you didn't sink the ship.";
+		if(user.getHits() < comp.getHits()){
+			return "Sorry, but you've lost!.";
 		}
 		else{
-			return "You have beaten the game battleship, Thanks for playing!\nGood game, well played!";
+			return "Congratulations, You've Won!!";
 		}
 	}
 	
