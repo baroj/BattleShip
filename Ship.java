@@ -26,8 +26,8 @@ public class Ship extends Tester {
                 
                 if(isValidShipPlacement(board, row, col, orientation)){
                 	System.out.println("This is valid, placing on grid now...");
-                	placeShip(board, row, col, orientation);                 	
-                }
+                	placeShip(board, row, col, orientation); 
+}
                 else{
                 	System.out.println("This is not valid, getting new selection now...");
                 	j--;	
@@ -42,7 +42,7 @@ public class Ship extends Tester {
                 
                 if(isValidShipPlacement(board, row, col, orientation)){
                 	System.out.println("This is valid, placing on grid now...");
-                	placeShip(board, row, col, orientation);                 	
+                	placeShip(board, row, col, orientation);   
                 }
                 else{
                 	System.out.println("This is not valid, getting new selection now...");
@@ -59,7 +59,7 @@ public class Ship extends Tester {
      * @param row Beginning row.
      * @param col Beginning column.
      * @param orientation Random number that determines horizontal vs. vertical orientation
-     * @return True if this is a valid ship placement.
+     * @return True if no ship exists at this location.
      */
     public boolean isValidShipPlacement(Board board, int row, int col, double orientation){
     	if (orientation < 0.5){	//if orientation is horizontal
@@ -73,7 +73,7 @@ public class Ship extends Tester {
     	
     	else{	//else orientation is vertical
     		for(int i = 0; i < shipSize; i++){   		
-    			if(board.grid[row + 1][col].equals("S")){
+    			if(board.grid[row + i][col].equals("S")){
     				return false;
     			}
     		}
