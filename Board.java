@@ -62,13 +62,13 @@ public class Board extends Ship {
 	 * Gets value of current board size.
 	 * @return The size of current board.
 	 */
-	public int getSize(){
+	public static int getSize(){
 		return boardSize;
 	}
 	
 	
 	
 	public String[][] grid;
-	private int boardSize;	//by setting this value in the constructor - we only need to call .length() once
+	private static int boardSize;	//by setting this value in the constructor - we only need to call .length() once
 							//It's more efficient to do it this way
 }
