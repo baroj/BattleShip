@@ -29,12 +29,12 @@ public class Player {
         	 //Get User's Input Coordinates
         	 do {    		 
         		 getUserRow();	 
-        	 }while(!(row > 0 && row < 9));		   		 											
+        	 }while(!(row > 0 && row < (Board.getSize()+1)));		   		 											
         	 row--;		//Subtract 1 from row value because array index starts at 0
         	 
         	 do {    		 
         		 getUserColumn();	 
-        	 }while(!(col > 0 && col < 9));		   		 											
+        	 }while(!(col > 0 && col < (Board.getSize()+1)));		   		 											
         	 col--;		//Subtract 1 from column value because array index starts at 0 
         	 
         	 updateGrid(board);    //update the current grid with the user's move  	 
@@ -45,7 +45,7 @@ public class Player {
      * Requests and stores a valid row from user input.
      */
     public void getUserRow(){
-   	 	System.out.println("Select a row to fire in (1 -> 8) : ");
+   	 	System.out.println("Select a row to fire in (1 -> " + Board.getSize() + ") : ");
    	 	row = input.nextInt();
     }
     
@@ -54,7 +54,7 @@ public class Player {
      * Requests and stores a valid column from user input.
      */
     public void getUserColumn(){
-    	 System.out.println("Select a column to fire in (1 -> 8) : ");
+    	 System.out.println("Select a column to fire in ((1 -> " + Board.getSize() + ") : ");
     	 col = input.nextInt();
     }
     
@@ -91,7 +91,7 @@ public class Player {
      * Gets current hit count.
      * @return Total number of hits.
      */
-    public int getHits(){
+    public int getHitCount(){
     	return hits;
     }
     
@@ -111,3 +111,4 @@ public class Player {
 	private int col;
 	private boolean fireAgain;
 }
+
