@@ -13,48 +13,48 @@ public class Move {
 	 * @param x
 	 * @param y
 	 */
-	public Move(int x, int y){
-		xCord = x;
-		yCord = y;
+	public Move(int r, int c){
+		row = r;
+		col = c;
 	}
 
 	/**
-	 * Get value of x-coordinate.
-	 * @return Value of x-coordinate.
+	 * Get row.
+	 * @return Row.
 	 */
-	public int getX(){
-		return xCord;
+	public int getRow(){
+		return row;
 	}
 
 	/**
-	 * Get value of y-coordinate.
-	 * @return Value of y-coordinate.
+	 * Get column.
+	 * @return Column.
 	 */
-	public int getY(){
-		return yCord;
+	public int getCol(){
+		return col;
 	}
 
 	/**
 	 * Set value of x-coordinate.
 	 * @param x New value for x-coordinate.
 	 */
-	public void setX(int x){
-		xCord = x;
+	public void setRow(int r){
+		row = r;
 	}
 
 	/**
 	 * Set value of y-coordinate.
 	 * @param y New value for y-coordinate.
 	 */
-	public void setY(int y){
-		yCord = y;
+	public void setCol(int c){
+		col = c;
 	}
 
 	/**
 	 * Convert x and y coordinates to a string with structure : "x, y"
 	 */
 	public String toString(){
-		return xCord + ", " + yCord;
+		return row + ", " + col;
 	}
 
 	/**
@@ -63,7 +63,7 @@ public class Move {
 	 * @return True if this move's coordinates is directly above Move 'other'.
 	 */
 	public Boolean isNorth(Move other){
-		if((this.getX() == other.getX()) && (this.getY() == (other.getY()-1))){
+		if((this.getCol() == other.getCol()) && (this.getRow() == (other.getRow()-1))){
 			return true;
 		}
 		else{
@@ -77,7 +77,7 @@ public class Move {
 	 * @return True if this move's coordinates is directly below Move 'other'.
 	 */
 	public Boolean isSouth(Move other){
-		if((this.getX() == other.getX()) && (this.getY() == (other.getY()+1))){
+		if((this.getCol() == other.getCol()) && (this.getRow() == (other.getRow()+1))){
 			return true;
 		}
 		else{
@@ -91,7 +91,7 @@ public class Move {
 	 * @return True if this move's coordinates is directly to right of Move 'other'.
 	 */
 	public Boolean isEast(Move other){
-		if((this.getY() == other.getY()) && (this.getX() == (other.getX()+1))){
+		if((this.getRow() == other.getRow()) && (this.getCol() == (other.getCol()+1))){
 			return true;
 		}
 		else{
@@ -105,7 +105,7 @@ public class Move {
 	 * @return True if this move's coordinates is directly to left of Move 'other'.
 	 */
 	public Boolean isWest(Move other){
-		if((this.getY() == other.getY()) && (this.getX() == (other.getX()-1))){
+		if((this.getRow() == other.getRow()) && (this.getCol() == (other.getCol()-1))){
 			return true;
 		}
 		else{
@@ -120,7 +120,7 @@ public class Move {
 	 * @return True if move coordinate is a hit.
 	 */
 	public Boolean isHit(Board board){
-		if(board.grid[this.getY()][this.getX()] == "!"){
+		if(board.grid[this.getRow()][this.getCol()] == "!"){
 			return true;
 		}
 		else{
@@ -135,7 +135,7 @@ public class Move {
 	 * @return True if move coordinate is a missed shot.
 	 */
 	public Boolean isMiss(Board board){
-		if(board.grid[this.getY()][this.getX()] == "M"){
+		if(board.grid[this.getRow()][this.getCol()] == "M"){
 			return true;
 		}
 		else{
@@ -150,16 +150,16 @@ public class Move {
 	 * @return True if current coordinate is not already fired upon and is valid coordinate on grid.
 	 */
 	public Boolean isValidMove(Board board){
-		int col = this.getX();
-		int row = this.getY();
+		int col = this.getCol();
+		int row = this.getRow();
 		//if move is outside of the grid size - is not valid
-		if((col < 1) || (col > Board.getSize()) || (row < 1) || (row > Board.getSize())){	
-			System.out.println("Invalid Move Detected");
+		if((col < 0) || (col > Board.getSize()-1) || (row < 0) || (row > Board.getSize()-1)){	
+			System.out.println("Invalid Move Detected"); 
 			return false;															
 		}
-		//else if coordinate contains anything other than "~" - is has already been shot at, thus not valid
-		else if(board.grid[row][col] != "~"){
-			System.out.println("Invalid Move Detected");
+		//else if coordinate contains miss or hit - computer has already shot here
+		else if(this.isMiss(board) || this.isHit(board)){
+			System.out.println("Invalid Move Detected"); 
 			return false;
 		}
 		//else coordinate is a valid move
@@ -173,6 +173,6 @@ public class Move {
 
 	
 
-	private int xCord;
-	private int yCord;
+	private int row;
+	private int col;
 }
