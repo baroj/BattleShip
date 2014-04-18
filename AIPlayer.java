@@ -97,8 +97,8 @@ public class AIPlayer {
 	 * @param board The Board that the shot is being placed onto.
 	 */
 	public void placeShot(Move n, Board board){
-		int row = n.getY();
-		int col = n.getX();
+		int row = n.getRow();
+		int col = n.getCol();
 		System.out.println("Placing shot");
 		//Handles shot selection that is a hit
 		if(board.grid[row][col].equals("S")){			  
@@ -157,27 +157,31 @@ public class AIPlayer {
 	 * @return Move(-1, -1) if there are no moves available North, South, East or West of current Move.
 	 */
     public Move getLocalMove(Move move, Board board){
-    	int row = move.getY();
-    	int col = move.getX();
+    	int row = move.getRow();
+    	int col = move.getCol();
     	Move localMove = new Move(row, col-1);	
+    	System.out.println("Trying localMove " + localMove.toString());
     	if(localMove.isValidMove(board)){			//if West coordinate is valid - return
     		System.out.println("returning local W: " + localMove.toString());
     		return localMove;
     	}
     	else{
     		localMove = new Move(row, col +1);
+        	System.out.println("Trying localMove " + localMove.toString());
     		if(localMove.isValidMove(board)){		//else if East coordinate is valid - return
     			System.out.println("Returning local E: " + localMove.toString());
     			return localMove;
     		}
     		else{
     			localMove = new Move (row-1, col);
+    	    	System.out.println("Trying localMove " + localMove.toString());
     			if(localMove.isValidMove(board)){	//else if South coordinate is valid - return
     				System.out.println("Returning local S: " + localMove.toString());
     				return localMove;
     			}
     			else{
     				localMove = new Move(row+1, col);
+    		    	System.out.println("Trying localMove " + localMove.toString());
     				if(localMove.isValidMove(board)){//else if North coordinate is valid - return
     					System.out.println("Returning local N: " + localMove.toString());
     					return localMove;
