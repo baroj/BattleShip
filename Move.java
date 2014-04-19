@@ -51,10 +51,10 @@ public class Move {
 	}
 
 	/**
-	 * Convert x and y coordinates to a string with structure : "x, y"
+	 * Convert x and y coordinates to a string with structure : "row, cplumn"
 	 */
 	public String toString(){
-		return row + ", " + col;
+		return (row + 1) + ", " + (col + 1);
 	}
 
 	/**
@@ -154,12 +154,12 @@ public class Move {
 		int row = this.getRow();
 		//if move is outside of the grid size - is not valid
 		if((col < 0) || (col > Board.getSize()-1) || (row < 0) || (row > Board.getSize()-1)){	
-			System.out.println("Invalid Move Detected"); 
+			System.out.println("Invalid Move Detected\nStay Within Grid!"); 
 			return false;															
 		}
 		//else if coordinate contains miss or hit - computer has already shot here
 		else if(this.isMiss(board) || this.isHit(board)){
-			System.out.println("Invalid Move Detected"); 
+			System.out.println("Invalid Move Detected\nAlready shot here!"); 
 			return false;
 		}
 		//else coordinate is a valid move
