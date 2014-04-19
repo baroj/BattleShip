@@ -12,17 +12,20 @@ public class AIPlayer {
 	 * @param s The skill level being applied to computer player.
 	 */
 	public AIPlayer(int s){
+		generator = new Random();
 		skillLevel = s;
 		hits = 0;
 		shotsFired = 0;
 		nextMove = new Move(0,0);
 		prevMove = new Move(0,0);
 		//prevPrevMove = new Move(0,0);
-		generator = new Random();
 		System.out.println("Computer player constructed.");
 		System.out.print("Skill level chosen: ");
 		if(skillLevel==0){
 			System.out.println("Beginner");
+		}
+		else{
+			System.out.println("Adanced");
 		}
 	}
 
@@ -31,26 +34,31 @@ public class AIPlayer {
 	 * Calculates the next computer move
 	 */
 	public void compFire(Board board){
-		//
-		if(skillLevel==0){	//skill level is beginner - computer moves are random
+		
+		//SKILL LEVEL BEGINNER - shot selections are random
+		if(skillLevel==0){	
 			nextMove = getRandomMove();
 			while(!nextMove.isValidMove(board)){
 				nextMove = getRandomMove();
 			}
-			placeShot(nextMove, board);
-		}		
+			placeShot(board, nextMove);
+		}
 		
-		
-		else{	//else skill level is advanced - computer utilizes battleship strategies
-			if(shotsFired == 0){	//If first shot of game, select 1 at random
+		//SKILL LEVEL ADVANCED - computer utilizes battleship strategies
+		else{			
+			if(shotsFired == 0){	//If first shot of game, select shot at random
 				System.out.println("First shot of game.");
 				nextMove = getRandomMove();
-				prevMove = nextMove;
-				placeShot(nextMove, board);
+				while(!nextMove.isValidMove(board)){
+					nextMove = getRandomMove();
+				}
+				placeShot(board, nextMove);
 			}
 			
 			
-			else{
+			
+			else{	//If not first shot of game - utilize battleship strategy
+				
 				//if previous move is a hit - get a local move
 				if(prevMove.isHit(board)){	
 					System.out.println("prevMove.isHit: " + prevMove.toString());
@@ -58,9 +66,9 @@ public class AIPlayer {
 					//if local move is a valid move - place it on the grid
 					if(nextMove.isValidMove(board)){
 						System.out.println("nextMove.isValid: " + nextMove.toString());
-						prevMove = nextMove;
 						System.out.println("Placing next local move: " + nextMove.toString());
-						placeShot(nextMove, board);
+						placeShot(board, nextMove);
+						
 					}
 					//else - no local moves are available - resort to getting random moves
 					else{
@@ -69,65 +77,45 @@ public class AIPlayer {
 							nextMove = getRandomMove();
 						}
 						System.out.println("Placing random shot: " + nextMove.toString());
-						prevMove = nextMove;		//place valid move on board
-						placeShot(nextMove, board);				
+						placeShot(board, nextMove);				
 					}
 					
 				}
+				
 				//else previous move is not a hit - so resort to random move and place on board
 				else{
 					System.out.println("prevMove is not a hit - get random move.");
 					nextMove = getRandomMove();
-					prevMove = nextMove;
-					placeShot(nextMove, board);
+					while(!nextMove.isValidMove(board)){
+						nextMove = getRandomMove();
+					}
+					placeShot(board, nextMove);
 				}
 			}
-
-
-		}
+		}	
+	}
 
 	
-
-	}
-
-
 	/**
-	 * Places a shot on the game board at specified coordinates.
-	 * @param n The Move coordinates being used to place shot.
-	 * @param board The Board that the shot is being placed onto.
-	 */
-	public void placeShot(Move n, Board board){
-		int row = n.getRow();
-		int col = n.getCol();
-		System.out.println("Placing shot");
-		//Handles shot selection that is a hit
-		if(board.grid[row][col].equals("S")){			  
-    		hits++;
-    		shotsFired++;
-    		System.out.println("~~~~~~~ HIT ~~~~~~~");
-    		board.grid[row][col] = "!";
-    	 }
-    	 
-    	 //Handles a shot selection that has already been previously selected
-    	 else if (board.grid[row][col].equals("M") || board.grid[row][col].equals("!")){
-    		 System.out.println("Computer already shot here");
-    		 compFire(board);	//If this shot has already been made - whoops, get another move!
-    	 }
-    	 
-    	 //Handles a shot selection that is a miss.
-    	 else{
-    		 shotsFired++;
-    		 System.out.println("~~~~~~~ MISS ~~~~~~~");
-    		 board.grid[row][col] = "M";
-    	 } 
-
-	}
-
+     * Handles shot and increments player's hit counter and shotsFired counter accordingly.
+     * @param board Game board shot is being placed on.
+     * @param nextMove Coordinates of move being placed on grid.
+     */
+    public void placeShot(Board board, Move nextMove){
+		 board.updateGrid(nextMove);
+		 prevMove = nextMove;
+		 if(nextMove.isHit(board)){		//if grid update resulted in a hit - increment hits count
+			 hits++;					
+		 }
+		 shotsFired++;
+    }
+	
+	
 	  /**
      * Gets current hit count.
      * @return Total number of hits.
      */
-    public int getHitCount(){
+	  public int getHitCount(){
     	return hits;
     }
     
@@ -198,14 +186,14 @@ public class AIPlayer {
     
     
     
-    
-    
-	private int shotsFired;
-	private int hits;
-	//private Move prevMove;	Will need this when utilizing advanced AI
+   // private int localMoveCounter;	--> need way to check for another localMove if the first localMove is a miss
+   //we want the computer to exhaust all 4 corners of the last hit before moving onto random shot selection
+	private Random generator;
 	private Move nextMove;
 	private Move prevMove;
-	//private Move prevPrevMove;
-	private Random generator;
 	private int skillLevel;
+	private int shotsFired;
+	private int hits;
+
+
 }
