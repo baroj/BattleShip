@@ -1,0 +1,3860 @@
+//Output taken from game played on 4/18/14
+//Purposely allowed computer to win
+//Testing getLocalMove(prevMove) for proper functionality
+
+Please choose your skill level (0 for beginnger/1 for advanced)
+1
+Placing user ships on user's board:
+Creating Ship:
+Random # > .5 = Vertical Ship
+3,7
+This is valid, placing on grid now...
+Creating Ship:
+Random # < .5 = Horizontal Ship
+2,3
+This is valid, placing on grid now...
+Creating Ship:
+Random # > .5 = Vertical Ship
+1,4
+This is not valid, getting new selection now...
+Creating Ship:
+Random # > .5 = Vertical Ship
+2,4
+This is not valid, getting new selection now...
+Creating Ship:
+Random # > .5 = Vertical Ship
+2,7
+This is not valid, getting new selection now...
+Creating Ship:
+Random # < .5 = Horizontal Ship
+1,1
+This is valid, placing on grid now...
+ S S S S ~ ~ ~ ~
+ ~ ~ S S S S ~ ~
+ ~ ~ ~ ~ ~ ~ S ~
+ ~ ~ ~ ~ ~ ~ S ~
+ ~ ~ ~ ~ ~ ~ S ~
+ ~ ~ ~ ~ ~ ~ S ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+Placing computer ships on computer's board
+Creating Ship:
+Random # > .5 = Vertical Ship
+3,3
+This is valid, placing on grid now...
+Creating Ship:
+Random # > .5 = Vertical Ship
+1,6
+This is valid, placing on grid now...
+Creating Ship:
+Random # > .5 = Vertical Ship
+1,6
+This is not valid, getting new selection now...
+Creating Ship:
+Random # > .5 = Vertical Ship
+3,5
+This is valid, placing on grid now...
+ ~ ~ ~ ~ ~ S ~ ~
+ ~ ~ ~ ~ ~ S ~ ~
+ ~ ~ S ~ S S ~ ~
+ ~ ~ S ~ S S ~ ~
+ ~ ~ S ~ S ~ ~ ~
+ ~ ~ S ~ S ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+Computer player constructed.
+Skill level chosen: Adanced
+
+
+
+COMPUTER'S TURN
+COMPUTER'S GAMEBOARD:
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+
+First shot of game.
+Valid Move Detected
+Valid Move Detected
+~~~~~~~ MISS ~~~~~~~
+COMPUTER HAS FIRED!
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ M ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+
+
+
+
+USER'S TURN
+USER'S GAMEBOARD:
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+
+Select a row to fire in (1 -> 8) : 
+1
+Select a column to fire in ((1 -> 8) : 
+1
+Valid Move Detected
+Valid Move Detected
+~~~~~~~ HIT ~~~~~~~
+USER HAS FIRED!
+ ! ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+
+
+
+
+COMPUTER'S TURN
+COMPUTER'S GAMEBOARD:
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ M ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+
+prevMove is not a hit - get random move.
+Valid Move Detected
+Valid Move Detected
+~~~~~~~ MISS ~~~~~~~
+COMPUTER HAS FIRED!
+ ~ ~ ~ ~ ~ ~ ~ ~
+ M ~ ~ ~ ~ ~ ~ ~
+ ~ M ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+
+
+
+
+USER'S TURN
+USER'S GAMEBOARD:
+ ! ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+
+Select a row to fire in (1 -> 8) : 
+1
+Select a column to fire in ((1 -> 8) : 
+2
+Valid Move Detected
+Valid Move Detected
+~~~~~~~ HIT ~~~~~~~
+USER HAS FIRED!
+ ! ! ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+
+
+
+
+COMPUTER'S TURN
+COMPUTER'S GAMEBOARD:
+ ~ ~ ~ ~ ~ ~ ~ ~
+ M ~ ~ ~ ~ ~ ~ ~
+ ~ M ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+
+prevMove is not a hit - get random move.
+Invalid Move Detected
+Already shot here!
+Valid Move Detected
+Valid Move Detected
+~~~~~~~ MISS ~~~~~~~
+COMPUTER HAS FIRED!
+ ~ ~ ~ ~ ~ ~ ~ ~
+ M ~ ~ ~ ~ ~ ~ ~
+ ~ M ~ ~ ~ ~ ~ ~
+ M ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+
+
+
+
+USER'S TURN
+USER'S GAMEBOARD:
+ ! ! ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+
+Select a row to fire in (1 -> 8) : 
+1
+Select a column to fire in ((1 -> 8) : 
+3
+Valid Move Detected
+Valid Move Detected
+~~~~~~~ HIT ~~~~~~~
+USER HAS FIRED!
+ ! ! ! ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+
+
+
+
+COMPUTER'S TURN
+COMPUTER'S GAMEBOARD:
+ ~ ~ ~ ~ ~ ~ ~ ~
+ M ~ ~ ~ ~ ~ ~ ~
+ ~ M ~ ~ ~ ~ ~ ~
+ M ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+
+prevMove is not a hit - get random move.
+Valid Move Detected
+Valid Move Detected
+~~~~~~~ MISS ~~~~~~~
+COMPUTER HAS FIRED!
+ ~ ~ ~ ~ ~ ~ ~ M
+ M ~ ~ ~ ~ ~ ~ ~
+ ~ M ~ ~ ~ ~ ~ ~
+ M ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+
+
+
+
+USER'S TURN
+USER'S GAMEBOARD:
+ ! ! ! ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+
+Select a row to fire in (1 -> 8) : 
+1
+Select a column to fire in ((1 -> 8) : 
+4
+Valid Move Detected
+Valid Move Detected
+~~~~~~~ HIT ~~~~~~~
+USER HAS FIRED!
+ ! ! ! ! ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+
+
+
+
+COMPUTER'S TURN
+COMPUTER'S GAMEBOARD:
+ ~ ~ ~ ~ ~ ~ ~ M
+ M ~ ~ ~ ~ ~ ~ ~
+ ~ M ~ ~ ~ ~ ~ ~
+ M ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+
+prevMove is not a hit - get random move.
+Valid Move Detected
+Valid Move Detected
+~~~~~~~ HIT ~~~~~~~
+COMPUTER HAS FIRED!
+ ~ ~ ~ ~ ~ ~ ~ M
+ M ~ ~ ~ ~ ~ ~ ~
+ ~ M ~ ~ ~ ! ~ ~
+ M ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+
+
+
+
+USER'S TURN
+USER'S GAMEBOARD:
+ ! ! ! ! ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+
+Select a row to fire in (1 -> 8) : 
+1
+Select a column to fire in ((1 -> 8) : 
+5
+Valid Move Detected
+Valid Move Detected
+~~~~~~~ MISS ~~~~~~~
+USER HAS FIRED!
+ ! ! ! ! M ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+
+
+
+
+COMPUTER'S TURN
+COMPUTER'S GAMEBOARD:
+ ~ ~ ~ ~ ~ ~ ~ M
+ M ~ ~ ~ ~ ~ ~ ~
+ ~ M ~ ~ ~ ! ~ ~
+ M ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+
+prevMove.isHit: 3, 6
+Trying localMove 3, 5
+Valid Move Detected
+returning local W: 3, 5
+Valid Move Detected
+nextMove.isValid: 3, 5
+Placing next local move: 3, 5
+Valid Move Detected
+~~~~~~~ HIT ~~~~~~~
+COMPUTER HAS FIRED!
+ ~ ~ ~ ~ ~ ~ ~ M
+ M ~ ~ ~ ~ ~ ~ ~
+ ~ M ~ ~ ! ! ~ ~
+ M ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+
+
+
+
+USER'S TURN
+USER'S GAMEBOARD:
+ ! ! ! ! M ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+
+Select a row to fire in (1 -> 8) : 
+1
+Select a column to fire in ((1 -> 8) : 
+6
+Valid Move Detected
+Valid Move Detected
+~~~~~~~ MISS ~~~~~~~
+USER HAS FIRED!
+ ! ! ! ! M M ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+
+
+
+
+COMPUTER'S TURN
+COMPUTER'S GAMEBOARD:
+ ~ ~ ~ ~ ~ ~ ~ M
+ M ~ ~ ~ ~ ~ ~ ~
+ ~ M ~ ~ ! ! ~ ~
+ M ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+
+prevMove.isHit: 3, 5
+Trying localMove 3, 4
+Valid Move Detected
+returning local W: 3, 4
+Valid Move Detected
+nextMove.isValid: 3, 4
+Placing next local move: 3, 4
+Valid Move Detected
+~~~~~~~ MISS ~~~~~~~
+COMPUTER HAS FIRED!
+ ~ ~ ~ ~ ~ ~ ~ M
+ M ~ ~ ~ ~ ~ ~ ~
+ ~ M ~ M ! ! ~ ~
+ M ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+
+
+
+
+USER'S TURN
+USER'S GAMEBOARD:
+ ! ! ! ! M M ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+
+Select a row to fire in (1 -> 8) : 
+1
+Select a column to fire in ((1 -> 8) : 
+7
+Valid Move Detected
+Valid Move Detected
+~~~~~~~ MISS ~~~~~~~
+USER HAS FIRED!
+ ! ! ! ! M M M ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+
+
+
+
+COMPUTER'S TURN
+COMPUTER'S GAMEBOARD:
+ ~ ~ ~ ~ ~ ~ ~ M
+ M ~ ~ ~ ~ ~ ~ ~
+ ~ M ~ M ! ! ~ ~
+ M ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+
+prevMove is not a hit - get random move.
+Valid Move Detected
+Valid Move Detected
+~~~~~~~ MISS ~~~~~~~
+COMPUTER HAS FIRED!
+ ~ ~ ~ ~ ~ ~ ~ M
+ M ~ ~ ~ ~ ~ ~ ~
+ ~ M ~ M ! ! ~ ~
+ M ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ M ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+
+
+
+
+USER'S TURN
+USER'S GAMEBOARD:
+ ! ! ! ! M M M ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+
+Select a row to fire in (1 -> 8) : 
+1
+Select a column to fire in ((1 -> 8) : 
+8
+Valid Move Detected
+Valid Move Detected
+~~~~~~~ MISS ~~~~~~~
+USER HAS FIRED!
+ ! ! ! ! M M M M
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+
+
+
+
+COMPUTER'S TURN
+COMPUTER'S GAMEBOARD:
+ ~ ~ ~ ~ ~ ~ ~ M
+ M ~ ~ ~ ~ ~ ~ ~
+ ~ M ~ M ! ! ~ ~
+ M ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ M ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+
+prevMove is not a hit - get random move.
+Valid Move Detected
+Valid Move Detected
+~~~~~~~ MISS ~~~~~~~
+COMPUTER HAS FIRED!
+ ~ M ~ ~ ~ ~ ~ M
+ M ~ ~ ~ ~ ~ ~ ~
+ ~ M ~ M ! ! ~ ~
+ M ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ M ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+
+
+
+
+USER'S TURN
+USER'S GAMEBOARD:
+ ! ! ! ! M M M M
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+
+Select a row to fire in (1 -> 8) : 
+2
+Select a column to fire in ((1 -> 8) : 
+1
+Valid Move Detected
+Valid Move Detected
+~~~~~~~ MISS ~~~~~~~
+USER HAS FIRED!
+ ! ! ! ! M M M M
+ M ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+
+
+
+
+COMPUTER'S TURN
+COMPUTER'S GAMEBOARD:
+ ~ M ~ ~ ~ ~ ~ M
+ M ~ ~ ~ ~ ~ ~ ~
+ ~ M ~ M ! ! ~ ~
+ M ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ M ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+
+prevMove is not a hit - get random move.
+Valid Move Detected
+Valid Move Detected
+~~~~~~~ MISS ~~~~~~~
+COMPUTER HAS FIRED!
+ ~ M ~ ~ ~ ~ ~ M
+ M ~ ~ ~ ~ ~ ~ ~
+ ~ M ~ M ! ! ~ ~
+ M ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ M ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ M ~ ~ ~
+
+
+
+
+USER'S TURN
+USER'S GAMEBOARD:
+ ! ! ! ! M M M M
+ M ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+
+Select a row to fire in (1 -> 8) : 
+2
+Select a column to fire in ((1 -> 8) : 
+2
+Valid Move Detected
+Valid Move Detected
+~~~~~~~ MISS ~~~~~~~
+USER HAS FIRED!
+ ! ! ! ! M M M M
+ M M ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+
+
+
+
+COMPUTER'S TURN
+COMPUTER'S GAMEBOARD:
+ ~ M ~ ~ ~ ~ ~ M
+ M ~ ~ ~ ~ ~ ~ ~
+ ~ M ~ M ! ! ~ ~
+ M ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ M ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ M ~ ~ ~
+
+prevMove is not a hit - get random move.
+Valid Move Detected
+Valid Move Detected
+~~~~~~~ HIT ~~~~~~~
+COMPUTER HAS FIRED!
+ ~ M ~ ~ ~ ! ~ M
+ M ~ ~ ~ ~ ~ ~ ~
+ ~ M ~ M ! ! ~ ~
+ M ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ M ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ M ~ ~ ~
+
+
+
+
+USER'S TURN
+USER'S GAMEBOARD:
+ ! ! ! ! M M M M
+ M M ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+
+Select a row to fire in (1 -> 8) : 
+2
+Select a column to fire in ((1 -> 8) : 
+3
+Valid Move Detected
+Valid Move Detected
+~~~~~~~ HIT ~~~~~~~
+USER HAS FIRED!
+ ! ! ! ! M M M M
+ M M ! ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+
+
+
+
+COMPUTER'S TURN
+COMPUTER'S GAMEBOARD:
+ ~ M ~ ~ ~ ! ~ M
+ M ~ ~ ~ ~ ~ ~ ~
+ ~ M ~ M ! ! ~ ~
+ M ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ M ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ M ~ ~ ~
+
+prevMove.isHit: 1, 6
+Trying localMove 1, 5
+Valid Move Detected
+returning local W: 1, 5
+Valid Move Detected
+nextMove.isValid: 1, 5
+Placing next local move: 1, 5
+Valid Move Detected
+~~~~~~~ MISS ~~~~~~~
+COMPUTER HAS FIRED!
+ ~ M ~ ~ M ! ~ M
+ M ~ ~ ~ ~ ~ ~ ~
+ ~ M ~ M ! ! ~ ~
+ M ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ M ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ M ~ ~ ~
+
+
+
+
+USER'S TURN
+USER'S GAMEBOARD:
+ ! ! ! ! M M M M
+ M M ! ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+
+Select a row to fire in (1 -> 8) : 
+2
+Select a column to fire in ((1 -> 8) : 
+4
+Valid Move Detected
+Valid Move Detected
+~~~~~~~ HIT ~~~~~~~
+USER HAS FIRED!
+ ! ! ! ! M M M M
+ M M ! ! ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+
+
+
+
+COMPUTER'S TURN
+COMPUTER'S GAMEBOARD:
+ ~ M ~ ~ M ! ~ M
+ M ~ ~ ~ ~ ~ ~ ~
+ ~ M ~ M ! ! ~ ~
+ M ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ M ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ M ~ ~ ~
+
+prevMove is not a hit - get random move.
+Valid Move Detected
+Valid Move Detected
+~~~~~~~ MISS ~~~~~~~
+COMPUTER HAS FIRED!
+ ~ M ~ ~ M ! ~ M
+ M ~ ~ ~ ~ ~ ~ ~
+ M M ~ M ! ! ~ ~
+ M ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ M ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ M ~ ~ ~
+
+
+
+
+USER'S TURN
+USER'S GAMEBOARD:
+ ! ! ! ! M M M M
+ M M ! ! ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+
+Select a row to fire in (1 -> 8) : 
+2
+Select a column to fire in ((1 -> 8) : 
+6
+Valid Move Detected
+Valid Move Detected
+~~~~~~~ HIT ~~~~~~~
+USER HAS FIRED!
+ ! ! ! ! M M M M
+ M M ! ! ~ ! ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+
+
+
+
+COMPUTER'S TURN
+COMPUTER'S GAMEBOARD:
+ ~ M ~ ~ M ! ~ M
+ M ~ ~ ~ ~ ~ ~ ~
+ M M ~ M ! ! ~ ~
+ M ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ M ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ M ~ ~ ~
+
+prevMove is not a hit - get random move.
+Valid Move Detected
+Valid Move Detected
+~~~~~~~ MISS ~~~~~~~
+COMPUTER HAS FIRED!
+ ~ M ~ ~ M ! ~ M
+ M ~ ~ ~ ~ ~ ~ ~
+ M M ~ M ! ! ~ ~
+ M ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ M ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ M
+ ~ ~ ~ ~ M ~ ~ ~
+
+
+
+
+USER'S TURN
+USER'S GAMEBOARD:
+ ! ! ! ! M M M M
+ M M ! ! ~ ! ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+
+Select a row to fire in (1 -> 8) : 
+2
+Select a column to fire in ((1 -> 8) : 
+7
+Valid Move Detected
+Valid Move Detected
+~~~~~~~ MISS ~~~~~~~
+USER HAS FIRED!
+ ! ! ! ! M M M M
+ M M ! ! ~ ! M ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+
+
+
+
+COMPUTER'S TURN
+COMPUTER'S GAMEBOARD:
+ ~ M ~ ~ M ! ~ M
+ M ~ ~ ~ ~ ~ ~ ~
+ M M ~ M ! ! ~ ~
+ M ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ M ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ M
+ ~ ~ ~ ~ M ~ ~ ~
+
+prevMove is not a hit - get random move.
+Valid Move Detected
+Valid Move Detected
+~~~~~~~ HIT ~~~~~~~
+COMPUTER HAS FIRED!
+ ~ M ~ ~ M ! ~ M
+ M ~ ~ ~ ~ ~ ~ ~
+ M M ~ M ! ! ~ ~
+ M ~ ~ ~ ~ ! ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ M ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ M
+ ~ ~ ~ ~ M ~ ~ ~
+
+
+
+
+USER'S TURN
+USER'S GAMEBOARD:
+ ! ! ! ! M M M M
+ M M ! ! ~ ! M ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+
+Select a row to fire in (1 -> 8) : 
+2
+Select a column to fire in ((1 -> 8) : 
+8
+Valid Move Detected
+Valid Move Detected
+~~~~~~~ MISS ~~~~~~~
+USER HAS FIRED!
+ ! ! ! ! M M M M
+ M M ! ! ~ ! M M
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+
+
+
+
+COMPUTER'S TURN
+COMPUTER'S GAMEBOARD:
+ ~ M ~ ~ M ! ~ M
+ M ~ ~ ~ ~ ~ ~ ~
+ M M ~ M ! ! ~ ~
+ M ~ ~ ~ ~ ! ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ M ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ M
+ ~ ~ ~ ~ M ~ ~ ~
+
+prevMove.isHit: 4, 6
+Trying localMove 4, 5
+Valid Move Detected
+returning local W: 4, 5
+Valid Move Detected
+nextMove.isValid: 4, 5
+Placing next local move: 4, 5
+Valid Move Detected
+~~~~~~~ HIT ~~~~~~~
+COMPUTER HAS FIRED!
+ ~ M ~ ~ M ! ~ M
+ M ~ ~ ~ ~ ~ ~ ~
+ M M ~ M ! ! ~ ~
+ M ~ ~ ~ ! ! ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ M ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ M
+ ~ ~ ~ ~ M ~ ~ ~
+
+
+
+
+USER'S TURN
+USER'S GAMEBOARD:
+ ! ! ! ! M M M M
+ M M ! ! ~ ! M M
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+
+Select a row to fire in (1 -> 8) : 
+3
+Select a column to fire in ((1 -> 8) : 
+1
+Valid Move Detected
+Valid Move Detected
+~~~~~~~ MISS ~~~~~~~
+USER HAS FIRED!
+ ! ! ! ! M M M M
+ M M ! ! ~ ! M M
+ M ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+
+
+
+
+COMPUTER'S TURN
+COMPUTER'S GAMEBOARD:
+ ~ M ~ ~ M ! ~ M
+ M ~ ~ ~ ~ ~ ~ ~
+ M M ~ M ! ! ~ ~
+ M ~ ~ ~ ! ! ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ M ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ M
+ ~ ~ ~ ~ M ~ ~ ~
+
+prevMove.isHit: 4, 5
+Trying localMove 4, 4
+Valid Move Detected
+returning local W: 4, 4
+Valid Move Detected
+nextMove.isValid: 4, 4
+Placing next local move: 4, 4
+Valid Move Detected
+~~~~~~~ MISS ~~~~~~~
+COMPUTER HAS FIRED!
+ ~ M ~ ~ M ! ~ M
+ M ~ ~ ~ ~ ~ ~ ~
+ M M ~ M ! ! ~ ~
+ M ~ ~ M ! ! ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ M ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ M
+ ~ ~ ~ ~ M ~ ~ ~
+
+
+
+
+USER'S TURN
+USER'S GAMEBOARD:
+ ! ! ! ! M M M M
+ M M ! ! ~ ! M M
+ M ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+
+Select a row to fire in (1 -> 8) : 
+3
+Select a column to fire in ((1 -> 8) : 
+2
+Valid Move Detected
+Valid Move Detected
+~~~~~~~ MISS ~~~~~~~
+USER HAS FIRED!
+ ! ! ! ! M M M M
+ M M ! ! ~ ! M M
+ M M ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+
+
+
+
+COMPUTER'S TURN
+COMPUTER'S GAMEBOARD:
+ ~ M ~ ~ M ! ~ M
+ M ~ ~ ~ ~ ~ ~ ~
+ M M ~ M ! ! ~ ~
+ M ~ ~ M ! ! ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ M ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ M
+ ~ ~ ~ ~ M ~ ~ ~
+
+prevMove is not a hit - get random move.
+Valid Move Detected
+Valid Move Detected
+~~~~~~~ HIT ~~~~~~~
+COMPUTER HAS FIRED!
+ ~ M ~ ~ M ! ~ M
+ M ~ ~ ~ ~ ! ~ ~
+ M M ~ M ! ! ~ ~
+ M ~ ~ M ! ! ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ M ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ M
+ ~ ~ ~ ~ M ~ ~ ~
+
+
+
+
+USER'S TURN
+USER'S GAMEBOARD:
+ ! ! ! ! M M M M
+ M M ! ! ~ ! M M
+ M M ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+
+Select a row to fire in (1 -> 8) : 
+3
+Select a column to fire in ((1 -> 8) : 
+3
+Valid Move Detected
+Valid Move Detected
+~~~~~~~ MISS ~~~~~~~
+USER HAS FIRED!
+ ! ! ! ! M M M M
+ M M ! ! ~ ! M M
+ M M M ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+
+
+
+
+COMPUTER'S TURN
+COMPUTER'S GAMEBOARD:
+ ~ M ~ ~ M ! ~ M
+ M ~ ~ ~ ~ ! ~ ~
+ M M ~ M ! ! ~ ~
+ M ~ ~ M ! ! ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ M ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ M
+ ~ ~ ~ ~ M ~ ~ ~
+
+prevMove.isHit: 2, 6
+Trying localMove 2, 5
+Valid Move Detected
+returning local W: 2, 5
+Valid Move Detected
+nextMove.isValid: 2, 5
+Placing next local move: 2, 5
+Valid Move Detected
+~~~~~~~ MISS ~~~~~~~
+COMPUTER HAS FIRED!
+ ~ M ~ ~ M ! ~ M
+ M ~ ~ ~ M ! ~ ~
+ M M ~ M ! ! ~ ~
+ M ~ ~ M ! ! ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ M ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ M
+ ~ ~ ~ ~ M ~ ~ ~
+
+
+
+
+USER'S TURN
+USER'S GAMEBOARD:
+ ! ! ! ! M M M M
+ M M ! ! ~ ! M M
+ M M M ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+
+Select a row to fire in (1 -> 8) : 
+3
+Select a column to fire in ((1 -> 8) : 
+4
+Valid Move Detected
+Valid Move Detected
+~~~~~~~ MISS ~~~~~~~
+USER HAS FIRED!
+ ! ! ! ! M M M M
+ M M ! ! ~ ! M M
+ M M M M ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+
+
+
+
+COMPUTER'S TURN
+COMPUTER'S GAMEBOARD:
+ ~ M ~ ~ M ! ~ M
+ M ~ ~ ~ M ! ~ ~
+ M M ~ M ! ! ~ ~
+ M ~ ~ M ! ! ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ M ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ M
+ ~ ~ ~ ~ M ~ ~ ~
+
+prevMove is not a hit - get random move.
+Valid Move Detected
+Valid Move Detected
+~~~~~~~ MISS ~~~~~~~
+COMPUTER HAS FIRED!
+ ~ M ~ ~ M ! ~ M
+ M ~ ~ ~ M ! ~ ~
+ M M ~ M ! ! ~ ~
+ M ~ ~ M ! ! ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ M ~ ~ ~ ~ ~ M
+ ~ ~ ~ ~ ~ ~ ~ M
+ ~ ~ ~ ~ M ~ ~ ~
+
+
+
+
+USER'S TURN
+USER'S GAMEBOARD:
+ ! ! ! ! M M M M
+ M M ! ! ~ ! M M
+ M M M M ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+
+Select a row to fire in (1 -> 8) : 
+3
+Select a column to fire in ((1 -> 8) : 
+5
+Valid Move Detected
+Valid Move Detected
+~~~~~~~ MISS ~~~~~~~
+USER HAS FIRED!
+ ! ! ! ! M M M M
+ M M ! ! ~ ! M M
+ M M M M M ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+
+
+
+
+COMPUTER'S TURN
+COMPUTER'S GAMEBOARD:
+ ~ M ~ ~ M ! ~ M
+ M ~ ~ ~ M ! ~ ~
+ M M ~ M ! ! ~ ~
+ M ~ ~ M ! ! ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ M ~ ~ ~ ~ ~ M
+ ~ ~ ~ ~ ~ ~ ~ M
+ ~ ~ ~ ~ M ~ ~ ~
+
+prevMove is not a hit - get random move.
+Invalid Move Detected
+Already shot here!
+Valid Move Detected
+Valid Move Detected
+~~~~~~~ MISS ~~~~~~~
+COMPUTER HAS FIRED!
+ ~ M ~ M M ! ~ M
+ M ~ ~ ~ M ! ~ ~
+ M M ~ M ! ! ~ ~
+ M ~ ~ M ! ! ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ M ~ ~ ~ ~ ~ M
+ ~ ~ ~ ~ ~ ~ ~ M
+ ~ ~ ~ ~ M ~ ~ ~
+
+
+
+
+USER'S TURN
+USER'S GAMEBOARD:
+ ! ! ! ! M M M M
+ M M ! ! ~ ! M M
+ M M M M M ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+
+Select a row to fire in (1 -> 8) : 
+3
+Select a column to fire in ((1 -> 8) : 
+6
+Valid Move Detected
+Valid Move Detected
+~~~~~~~ MISS ~~~~~~~
+USER HAS FIRED!
+ ! ! ! ! M M M M
+ M M ! ! ~ ! M M
+ M M M M M M ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+
+
+
+
+COMPUTER'S TURN
+COMPUTER'S GAMEBOARD:
+ ~ M ~ M M ! ~ M
+ M ~ ~ ~ M ! ~ ~
+ M M ~ M ! ! ~ ~
+ M ~ ~ M ! ! ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ M ~ ~ ~ ~ ~ M
+ ~ ~ ~ ~ ~ ~ ~ M
+ ~ ~ ~ ~ M ~ ~ ~
+
+prevMove is not a hit - get random move.
+Valid Move Detected
+Valid Move Detected
+~~~~~~~ MISS ~~~~~~~
+COMPUTER HAS FIRED!
+ ~ M ~ M M ! ~ M
+ M ~ ~ ~ M ! ~ ~
+ M M ~ M ! ! ~ ~
+ M ~ ~ M ! ! ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ M ~ ~ ~ ~ ~ M
+ ~ ~ M ~ ~ ~ ~ M
+ ~ ~ ~ ~ M ~ ~ ~
+
+
+
+
+USER'S TURN
+USER'S GAMEBOARD:
+ ! ! ! ! M M M M
+ M M ! ! ~ ! M M
+ M M M M M M ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+
+Select a row to fire in (1 -> 8) : 
+3
+Select a column to fire in ((1 -> 8) : 
+7
+Valid Move Detected
+Valid Move Detected
+~~~~~~~ HIT ~~~~~~~
+USER HAS FIRED!
+ ! ! ! ! M M M M
+ M M ! ! ~ ! M M
+ M M M M M M ! ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+
+
+
+
+COMPUTER'S TURN
+COMPUTER'S GAMEBOARD:
+ ~ M ~ M M ! ~ M
+ M ~ ~ ~ M ! ~ ~
+ M M ~ M ! ! ~ ~
+ M ~ ~ M ! ! ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ M ~ ~ ~ ~ ~ M
+ ~ ~ M ~ ~ ~ ~ M
+ ~ ~ ~ ~ M ~ ~ ~
+
+prevMove is not a hit - get random move.
+Valid Move Detected
+Valid Move Detected
+~~~~~~~ MISS ~~~~~~~
+COMPUTER HAS FIRED!
+ ~ M ~ M M ! ~ M
+ M ~ ~ ~ M ! ~ ~
+ M M ~ M ! ! ~ ~
+ M ~ ~ M ! ! ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ M ~ ~ ~ ~ M M
+ ~ ~ M ~ ~ ~ ~ M
+ ~ ~ ~ ~ M ~ ~ ~
+
+
+
+
+USER'S TURN
+USER'S GAMEBOARD:
+ ! ! ! ! M M M M
+ M M ! ! ~ ! M M
+ M M M M M M ! ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+
+Select a row to fire in (1 -> 8) : 
+3
+Select a column to fire in ((1 -> 8) : 
+8
+Valid Move Detected
+Valid Move Detected
+~~~~~~~ MISS ~~~~~~~
+USER HAS FIRED!
+ ! ! ! ! M M M M
+ M M ! ! ~ ! M M
+ M M M M M M ! M
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+
+
+
+
+COMPUTER'S TURN
+COMPUTER'S GAMEBOARD:
+ ~ M ~ M M ! ~ M
+ M ~ ~ ~ M ! ~ ~
+ M M ~ M ! ! ~ ~
+ M ~ ~ M ! ! ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ M ~ ~ ~ ~ M M
+ ~ ~ M ~ ~ ~ ~ M
+ ~ ~ ~ ~ M ~ ~ ~
+
+prevMove is not a hit - get random move.
+Valid Move Detected
+Valid Move Detected
+~~~~~~~ MISS ~~~~~~~
+COMPUTER HAS FIRED!
+ ~ M ~ M M ! ~ M
+ M ~ ~ ~ M ! ~ ~
+ M M ~ M ! ! ~ ~
+ M ~ ~ M ! ! ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ M ~ ~ ~ ~ M M
+ ~ ~ M ~ ~ ~ ~ M
+ ~ ~ M ~ M ~ ~ ~
+
+
+
+
+USER'S TURN
+USER'S GAMEBOARD:
+ ! ! ! ! M M M M
+ M M ! ! ~ ! M M
+ M M M M M M ! M
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+
+Select a row to fire in (1 -> 8) : 
+4
+Select a column to fire in ((1 -> 8) : 
+1
+Valid Move Detected
+Valid Move Detected
+~~~~~~~ MISS ~~~~~~~
+USER HAS FIRED!
+ ! ! ! ! M M M M
+ M M ! ! ~ ! M M
+ M M M M M M ! M
+ M ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+
+
+
+
+COMPUTER'S TURN
+COMPUTER'S GAMEBOARD:
+ ~ M ~ M M ! ~ M
+ M ~ ~ ~ M ! ~ ~
+ M M ~ M ! ! ~ ~
+ M ~ ~ M ! ! ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ M ~ ~ ~ ~ M M
+ ~ ~ M ~ ~ ~ ~ M
+ ~ ~ M ~ M ~ ~ ~
+
+prevMove is not a hit - get random move.
+Valid Move Detected
+Valid Move Detected
+~~~~~~~ MISS ~~~~~~~
+COMPUTER HAS FIRED!
+ ~ M ~ M M ! ~ M
+ M ~ ~ ~ M ! ~ ~
+ M M ~ M ! ! ~ ~
+ M M ~ M ! ! ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ M ~ ~ ~ ~ M M
+ ~ ~ M ~ ~ ~ ~ M
+ ~ ~ M ~ M ~ ~ ~
+
+
+
+
+USER'S TURN
+USER'S GAMEBOARD:
+ ! ! ! ! M M M M
+ M M ! ! ~ ! M M
+ M M M M M M ! M
+ M ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+
+Select a row to fire in (1 -> 8) : 
+4
+Select a column to fire in ((1 -> 8) : 
+2
+Valid Move Detected
+Valid Move Detected
+~~~~~~~ MISS ~~~~~~~
+USER HAS FIRED!
+ ! ! ! ! M M M M
+ M M ! ! ~ ! M M
+ M M M M M M ! M
+ M M ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+
+
+
+
+COMPUTER'S TURN
+COMPUTER'S GAMEBOARD:
+ ~ M ~ M M ! ~ M
+ M ~ ~ ~ M ! ~ ~
+ M M ~ M ! ! ~ ~
+ M M ~ M ! ! ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ M ~ ~ ~ ~ M M
+ ~ ~ M ~ ~ ~ ~ M
+ ~ ~ M ~ M ~ ~ ~
+
+prevMove is not a hit - get random move.
+Valid Move Detected
+Valid Move Detected
+~~~~~~~ MISS ~~~~~~~
+COMPUTER HAS FIRED!
+ ~ M ~ M M ! ~ M
+ M ~ ~ ~ M ! ~ M
+ M M ~ M ! ! ~ ~
+ M M ~ M ! ! ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ M ~ ~ ~ ~ M M
+ ~ ~ M ~ ~ ~ ~ M
+ ~ ~ M ~ M ~ ~ ~
+
+
+
+
+USER'S TURN
+USER'S GAMEBOARD:
+ ! ! ! ! M M M M
+ M M ! ! ~ ! M M
+ M M M M M M ! M
+ M M ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+
+Select a row to fire in (1 -> 8) : 
+4
+Select a column to fire in ((1 -> 8) : 
+3
+Valid Move Detected
+Valid Move Detected
+~~~~~~~ MISS ~~~~~~~
+USER HAS FIRED!
+ ! ! ! ! M M M M
+ M M ! ! ~ ! M M
+ M M M M M M ! M
+ M M M ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+
+
+
+
+COMPUTER'S TURN
+COMPUTER'S GAMEBOARD:
+ ~ M ~ M M ! ~ M
+ M ~ ~ ~ M ! ~ M
+ M M ~ M ! ! ~ ~
+ M M ~ M ! ! ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ M ~ ~ ~ ~ M M
+ ~ ~ M ~ ~ ~ ~ M
+ ~ ~ M ~ M ~ ~ ~
+
+prevMove is not a hit - get random move.
+Valid Move Detected
+Valid Move Detected
+~~~~~~~ MISS ~~~~~~~
+COMPUTER HAS FIRED!
+ ~ M ~ M M ! ~ M
+ M ~ ~ ~ M ! ~ M
+ M M ~ M ! ! ~ M
+ M M ~ M ! ! ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ M ~ ~ ~ ~ M M
+ ~ ~ M ~ ~ ~ ~ M
+ ~ ~ M ~ M ~ ~ ~
+
+
+
+
+USER'S TURN
+USER'S GAMEBOARD:
+ ! ! ! ! M M M M
+ M M ! ! ~ ! M M
+ M M M M M M ! M
+ M M M ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+
+Select a row to fire in (1 -> 8) : 
+4
+Select a column to fire in ((1 -> 8) : 
+4
+Valid Move Detected
+Valid Move Detected
+~~~~~~~ MISS ~~~~~~~
+USER HAS FIRED!
+ ! ! ! ! M M M M
+ M M ! ! ~ ! M M
+ M M M M M M ! M
+ M M M M ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+
+
+
+
+COMPUTER'S TURN
+COMPUTER'S GAMEBOARD:
+ ~ M ~ M M ! ~ M
+ M ~ ~ ~ M ! ~ M
+ M M ~ M ! ! ~ M
+ M M ~ M ! ! ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ M ~ ~ ~ ~ M M
+ ~ ~ M ~ ~ ~ ~ M
+ ~ ~ M ~ M ~ ~ ~
+
+prevMove is not a hit - get random move.
+Valid Move Detected
+Valid Move Detected
+~~~~~~~ HIT ~~~~~~~
+COMPUTER HAS FIRED!
+ ~ M ~ M M ! ~ M
+ M ~ ~ ~ M ! ~ M
+ M M ~ M ! ! ~ M
+ M M ~ M ! ! ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ M ! ~ ~ ~ M M
+ ~ ~ M ~ ~ ~ ~ M
+ ~ ~ M ~ M ~ ~ ~
+
+
+
+
+USER'S TURN
+USER'S GAMEBOARD:
+ ! ! ! ! M M M M
+ M M ! ! ~ ! M M
+ M M M M M M ! M
+ M M M M ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+
+Select a row to fire in (1 -> 8) : 
+4
+Select a column to fire in ((1 -> 8) : 
+5
+Valid Move Detected
+Valid Move Detected
+~~~~~~~ MISS ~~~~~~~
+USER HAS FIRED!
+ ! ! ! ! M M M M
+ M M ! ! ~ ! M M
+ M M M M M M ! M
+ M M M M M ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+
+
+
+
+COMPUTER'S TURN
+COMPUTER'S GAMEBOARD:
+ ~ M ~ M M ! ~ M
+ M ~ ~ ~ M ! ~ M
+ M M ~ M ! ! ~ M
+ M M ~ M ! ! ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ M ! ~ ~ ~ M M
+ ~ ~ M ~ ~ ~ ~ M
+ ~ ~ M ~ M ~ ~ ~
+
+prevMove.isHit: 6, 3
+Trying localMove 6, 2
+Invalid Move Detected
+Already shot here!
+Trying localMove 6, 4
+Valid Move Detected
+Returning local E: 6, 4
+Valid Move Detected
+nextMove.isValid: 6, 4
+Placing next local move: 6, 4
+Valid Move Detected
+~~~~~~~ MISS ~~~~~~~
+COMPUTER HAS FIRED!
+ ~ M ~ M M ! ~ M
+ M ~ ~ ~ M ! ~ M
+ M M ~ M ! ! ~ M
+ M M ~ M ! ! ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ M ! M ~ ~ M M
+ ~ ~ M ~ ~ ~ ~ M
+ ~ ~ M ~ M ~ ~ ~
+
+
+
+
+USER'S TURN
+USER'S GAMEBOARD:
+ ! ! ! ! M M M M
+ M M ! ! ~ ! M M
+ M M M M M M ! M
+ M M M M M ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+
+Select a row to fire in (1 -> 8) : 
+4
+Select a column to fire in ((1 -> 8) : 
+6
+Valid Move Detected
+Valid Move Detected
+~~~~~~~ MISS ~~~~~~~
+USER HAS FIRED!
+ ! ! ! ! M M M M
+ M M ! ! ~ ! M M
+ M M M M M M ! M
+ M M M M M M ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+
+
+
+
+COMPUTER'S TURN
+COMPUTER'S GAMEBOARD:
+ ~ M ~ M M ! ~ M
+ M ~ ~ ~ M ! ~ M
+ M M ~ M ! ! ~ M
+ M M ~ M ! ! ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ M ! M ~ ~ M M
+ ~ ~ M ~ ~ ~ ~ M
+ ~ ~ M ~ M ~ ~ ~
+
+prevMove is not a hit - get random move.
+Invalid Move Detected
+Already shot here!
+Valid Move Detected
+Valid Move Detected
+~~~~~~~ MISS ~~~~~~~
+COMPUTER HAS FIRED!
+ ~ M ~ M M ! ~ M
+ M ~ ~ ~ M ! ~ M
+ M M ~ M ! ! ~ M
+ M M ~ M ! ! M ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ M ! M ~ ~ M M
+ ~ ~ M ~ ~ ~ ~ M
+ ~ ~ M ~ M ~ ~ ~
+
+
+
+
+USER'S TURN
+USER'S GAMEBOARD:
+ ! ! ! ! M M M M
+ M M ! ! ~ ! M M
+ M M M M M M ! M
+ M M M M M M ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+
+Select a row to fire in (1 -> 8) : 
+4
+Select a column to fire in ((1 -> 8) : 
+7
+Valid Move Detected
+Valid Move Detected
+~~~~~~~ HIT ~~~~~~~
+USER HAS FIRED!
+ ! ! ! ! M M M M
+ M M ! ! ~ ! M M
+ M M M M M M ! M
+ M M M M M M ! ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+
+
+
+
+COMPUTER'S TURN
+COMPUTER'S GAMEBOARD:
+ ~ M ~ M M ! ~ M
+ M ~ ~ ~ M ! ~ M
+ M M ~ M ! ! ~ M
+ M M ~ M ! ! M ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ M ! M ~ ~ M M
+ ~ ~ M ~ ~ ~ ~ M
+ ~ ~ M ~ M ~ ~ ~
+
+prevMove is not a hit - get random move.
+Valid Move Detected
+Valid Move Detected
+~~~~~~~ MISS ~~~~~~~
+COMPUTER HAS FIRED!
+ ~ M ~ M M ! ~ M
+ M ~ ~ ~ M ! ~ M
+ M M ~ M ! ! ~ M
+ M M ~ M ! ! M ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ M ! M ~ ~ M M
+ ~ ~ M ~ ~ ~ ~ M
+ ~ M M ~ M ~ ~ ~
+
+
+
+
+USER'S TURN
+USER'S GAMEBOARD:
+ ! ! ! ! M M M M
+ M M ! ! ~ ! M M
+ M M M M M M ! M
+ M M M M M M ! ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+
+Select a row to fire in (1 -> 8) : 
+
+4
+Select a column to fire in ((1 -> 8) : 
+8
+Valid Move Detected
+Valid Move Detected
+~~~~~~~ MISS ~~~~~~~
+USER HAS FIRED!
+ ! ! ! ! M M M M
+ M M ! ! ~ ! M M
+ M M M M M M ! M
+ M M M M M M ! M
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+
+
+
+
+COMPUTER'S TURN
+COMPUTER'S GAMEBOARD:
+ ~ M ~ M M ! ~ M
+ M ~ ~ ~ M ! ~ M
+ M M ~ M ! ! ~ M
+ M M ~ M ! ! M ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ M ! M ~ ~ M M
+ ~ ~ M ~ ~ ~ ~ M
+ ~ M M ~ M ~ ~ ~
+
+prevMove is not a hit - get random move.
+Invalid Move Detected
+Already shot here!
+Valid Move Detected
+Valid Move Detected
+~~~~~~~ MISS ~~~~~~~
+COMPUTER HAS FIRED!
+ ~ M ~ M M ! ~ M
+ M ~ ~ ~ M ! M M
+ M M ~ M ! ! ~ M
+ M M ~ M ! ! M ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ M ! M ~ ~ M M
+ ~ ~ M ~ ~ ~ ~ M
+ ~ M M ~ M ~ ~ ~
+
+
+
+
+USER'S TURN
+USER'S GAMEBOARD:
+ ! ! ! ! M M M M
+ M M ! ! ~ ! M M
+ M M M M M M ! M
+ M M M M M M ! M
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+
+Select a row to fire in (1 -> 8) : 
+5
+Select a column to fire in ((1 -> 8) : 
+
+1
+Valid Move Detected
+Valid Move Detected
+~~~~~~~ MISS ~~~~~~~
+USER HAS FIRED!
+ ! ! ! ! M M M M
+ M M ! ! ~ ! M M
+ M M M M M M ! M
+ M M M M M M ! M
+ M ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+
+
+
+
+COMPUTER'S TURN
+COMPUTER'S GAMEBOARD:
+ ~ M ~ M M ! ~ M
+ M ~ ~ ~ M ! M M
+ M M ~ M ! ! ~ M
+ M M ~ M ! ! M ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ M ! M ~ ~ M M
+ ~ ~ M ~ ~ ~ ~ M
+ ~ M M ~ M ~ ~ ~
+
+prevMove is not a hit - get random move.
+Invalid Move Detected
+Already shot here!
+Invalid Move Detected
+Already shot here!
+Invalid Move Detected
+Already shot here!
+Valid Move Detected
+Valid Move Detected
+~~~~~~~ MISS ~~~~~~~
+COMPUTER HAS FIRED!
+ ~ M ~ M M ! ~ M
+ M ~ ~ ~ M ! M M
+ M M ~ M ! ! ~ M
+ M M ~ M ! ! M ~
+ ~ ~ ~ M ~ ~ ~ ~
+ ~ M ! M ~ ~ M M
+ ~ ~ M ~ ~ ~ ~ M
+ ~ M M ~ M ~ ~ ~
+
+
+
+
+USER'S TURN
+USER'S GAMEBOARD:
+ ! ! ! ! M M M M
+ M M ! ! ~ ! M M
+ M M M M M M ! M
+ M M M M M M ! M
+ M ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+
+Select a row to fire in (1 -> 8) : 
+5
+Select a column to fire in ((1 -> 8) : 
+2
+Valid Move Detected
+Valid Move Detected
+~~~~~~~ MISS ~~~~~~~
+USER HAS FIRED!
+ ! ! ! ! M M M M
+ M M ! ! ~ ! M M
+ M M M M M M ! M
+ M M M M M M ! M
+ M M ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+
+
+
+
+COMPUTER'S TURN
+COMPUTER'S GAMEBOARD:
+ ~ M ~ M M ! ~ M
+ M ~ ~ ~ M ! M M
+ M M ~ M ! ! ~ M
+ M M ~ M ! ! M ~
+ ~ ~ ~ M ~ ~ ~ ~
+ ~ M ! M ~ ~ M M
+ ~ ~ M ~ ~ ~ ~ M
+ ~ M M ~ M ~ ~ ~
+
+prevMove is not a hit - get random move.
+Invalid Move Detected
+Already shot here!
+Valid Move Detected
+Valid Move Detected
+~~~~~~~ MISS ~~~~~~~
+COMPUTER HAS FIRED!
+ ~ M ~ M M ! ~ M
+ M ~ ~ ~ M ! M M
+ M M ~ M ! ! ~ M
+ M M ~ M ! ! M ~
+ ~ ~ ~ M ~ ~ ~ ~
+ ~ M ! M ~ ~ M M
+ M ~ M ~ ~ ~ ~ M
+ ~ M M ~ M ~ ~ ~
+
+
+
+
+USER'S TURN
+USER'S GAMEBOARD:
+ ! ! ! ! M M M M
+ M M ! ! ~ ! M M
+ M M M M M M ! M
+ M M M M M M ! M
+ M M ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+
+Select a row to fire in (1 -> 8) : 
+5
+Select a column to fire in ((1 -> 8) : 
+3
+Valid Move Detected
+Valid Move Detected
+~~~~~~~ MISS ~~~~~~~
+USER HAS FIRED!
+ ! ! ! ! M M M M
+ M M ! ! ~ ! M M
+ M M M M M M ! M
+ M M M M M M ! M
+ M M M ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+
+
+
+
+COMPUTER'S TURN
+COMPUTER'S GAMEBOARD:
+ ~ M ~ M M ! ~ M
+ M ~ ~ ~ M ! M M
+ M M ~ M ! ! ~ M
+ M M ~ M ! ! M ~
+ ~ ~ ~ M ~ ~ ~ ~
+ ~ M ! M ~ ~ M M
+ M ~ M ~ ~ ~ ~ M
+ ~ M M ~ M ~ ~ ~
+
+prevMove is not a hit - get random move.
+Valid Move Detected
+Valid Move Detected
+~~~~~~~ MISS ~~~~~~~
+COMPUTER HAS FIRED!
+ M M ~ M M ! ~ M
+ M ~ ~ ~ M ! M M
+ M M ~ M ! ! ~ M
+ M M ~ M ! ! M ~
+ ~ ~ ~ M ~ ~ ~ ~
+ ~ M ! M ~ ~ M M
+ M ~ M ~ ~ ~ ~ M
+ ~ M M ~ M ~ ~ ~
+
+
+
+
+USER'S TURN
+USER'S GAMEBOARD:
+ ! ! ! ! M M M M
+ M M ! ! ~ ! M M
+ M M M M M M ! M
+ M M M M M M ! M
+ M M M ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+
+Select a row to fire in (1 -> 8) : 
+5
+Select a column to fire in ((1 -> 8) : 
+4
+Valid Move Detected
+Valid Move Detected
+~~~~~~~ MISS ~~~~~~~
+USER HAS FIRED!
+ ! ! ! ! M M M M
+ M M ! ! ~ ! M M
+ M M M M M M ! M
+ M M M M M M ! M
+ M M M M ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+
+
+
+
+COMPUTER'S TURN
+COMPUTER'S GAMEBOARD:
+ M M ~ M M ! ~ M
+ M ~ ~ ~ M ! M M
+ M M ~ M ! ! ~ M
+ M M ~ M ! ! M ~
+ ~ ~ ~ M ~ ~ ~ ~
+ ~ M ! M ~ ~ M M
+ M ~ M ~ ~ ~ ~ M
+ ~ M M ~ M ~ ~ ~
+
+prevMove is not a hit - get random move.
+Valid Move Detected
+Valid Move Detected
+~~~~~~~ MISS ~~~~~~~
+COMPUTER HAS FIRED!
+ M M ~ M M ! ~ M
+ M ~ ~ ~ M ! M M
+ M M ~ M ! ! ~ M
+ M M ~ M ! ! M ~
+ ~ ~ ~ M ~ M ~ ~
+ ~ M ! M ~ ~ M M
+ M ~ M ~ ~ ~ ~ M
+ ~ M M ~ M ~ ~ ~
+
+
+
+
+USER'S TURN
+USER'S GAMEBOARD:
+ ! ! ! ! M M M M
+ M M ! ! ~ ! M M
+ M M M M M M ! M
+ M M M M M M ! M
+ M M M M ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+
+Select a row to fire in (1 -> 8) : 
+5
+Select a column to fire in ((1 -> 8) : 
+5
+Valid Move Detected
+Valid Move Detected
+~~~~~~~ MISS ~~~~~~~
+USER HAS FIRED!
+ ! ! ! ! M M M M
+ M M ! ! ~ ! M M
+ M M M M M M ! M
+ M M M M M M ! M
+ M M M M M ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+
+
+
+
+COMPUTER'S TURN
+COMPUTER'S GAMEBOARD:
+ M M ~ M M ! ~ M
+ M ~ ~ ~ M ! M M
+ M M ~ M ! ! ~ M
+ M M ~ M ! ! M ~
+ ~ ~ ~ M ~ M ~ ~
+ ~ M ! M ~ ~ M M
+ M ~ M ~ ~ ~ ~ M
+ ~ M M ~ M ~ ~ ~
+
+prevMove is not a hit - get random move.
+Valid Move Detected
+Valid Move Detected
+~~~~~~~ MISS ~~~~~~~
+COMPUTER HAS FIRED!
+ M M ~ M M ! ~ M
+ M ~ ~ ~ M ! M M
+ M M ~ M ! ! ~ M
+ M M ~ M ! ! M ~
+ ~ ~ ~ M ~ M ~ M
+ ~ M ! M ~ ~ M M
+ M ~ M ~ ~ ~ ~ M
+ ~ M M ~ M ~ ~ ~
+
+
+
+
+USER'S TURN
+USER'S GAMEBOARD:
+ ! ! ! ! M M M M
+ M M ! ! ~ ! M M
+ M M M M M M ! M
+ M M M M M M ! M
+ M M M M M ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+
+Select a row to fire in (1 -> 8) : 
+5
+Select a column to fire in ((1 -> 8) : 
+6
+Valid Move Detected
+Valid Move Detected
+~~~~~~~ MISS ~~~~~~~
+USER HAS FIRED!
+ ! ! ! ! M M M M
+ M M ! ! ~ ! M M
+ M M M M M M ! M
+ M M M M M M ! M
+ M M M M M M ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+
+
+
+
+COMPUTER'S TURN
+COMPUTER'S GAMEBOARD:
+ M M ~ M M ! ~ M
+ M ~ ~ ~ M ! M M
+ M M ~ M ! ! ~ M
+ M M ~ M ! ! M ~
+ ~ ~ ~ M ~ M ~ M
+ ~ M ! M ~ ~ M M
+ M ~ M ~ ~ ~ ~ M
+ ~ M M ~ M ~ ~ ~
+
+prevMove is not a hit - get random move.
+Invalid Move Detected
+Already shot here!
+Invalid Move Detected
+Already shot here!
+Invalid Move Detected
+Already shot here!
+Valid Move Detected
+Valid Move Detected
+~~~~~~~ MISS ~~~~~~~
+COMPUTER HAS FIRED!
+ M M ~ M M ! ~ M
+ M ~ ~ ~ M ! M M
+ M M ~ M ! ! ~ M
+ M M ~ M ! ! M ~
+ ~ ~ ~ M ~ M M M
+ ~ M ! M ~ ~ M M
+ M ~ M ~ ~ ~ ~ M
+ ~ M M ~ M ~ ~ ~
+
+
+
+
+USER'S TURN
+USER'S GAMEBOARD:
+ ! ! ! ! M M M M
+ M M ! ! ~ ! M M
+ M M M M M M ! M
+ M M M M M M ! M
+ M M M M M M ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+
+Select a row to fire in (1 -> 8) : 
+5
+Select a column to fire in ((1 -> 8) : 
+7
+Valid Move Detected
+Valid Move Detected
+~~~~~~~ HIT ~~~~~~~
+USER HAS FIRED!
+ ! ! ! ! M M M M
+ M M ! ! ~ ! M M
+ M M M M M M ! M
+ M M M M M M ! M
+ M M M M M M ! ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+
+
+
+
+COMPUTER'S TURN
+COMPUTER'S GAMEBOARD:
+ M M ~ M M ! ~ M
+ M ~ ~ ~ M ! M M
+ M M ~ M ! ! ~ M
+ M M ~ M ! ! M ~
+ ~ ~ ~ M ~ M M M
+ ~ M ! M ~ ~ M M
+ M ~ M ~ ~ ~ ~ M
+ ~ M M ~ M ~ ~ ~
+
+prevMove is not a hit - get random move.
+Valid Move Detected
+Valid Move Detected
+~~~~~~~ MISS ~~~~~~~
+COMPUTER HAS FIRED!
+ M M ~ M M ! ~ M
+ M ~ ~ ~ M ! M M
+ M M ~ M ! ! ~ M
+ M M ~ M ! ! M ~
+ ~ M ~ M ~ M M M
+ ~ M ! M ~ ~ M M
+ M ~ M ~ ~ ~ ~ M
+ ~ M M ~ M ~ ~ ~
+
+
+
+
+USER'S TURN
+USER'S GAMEBOARD:
+ ! ! ! ! M M M M
+ M M ! ! ~ ! M M
+ M M M M M M ! M
+ M M M M M M ! M
+ M M M M M M ! ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+
+Select a row to fire in (1 -> 8) : 
+5
+Select a column to fire in ((1 -> 8) : 
+8
+Valid Move Detected
+Valid Move Detected
+~~~~~~~ MISS ~~~~~~~
+USER HAS FIRED!
+ ! ! ! ! M M M M
+ M M ! ! ~ ! M M
+ M M M M M M ! M
+ M M M M M M ! M
+ M M M M M M ! M
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+
+
+
+
+COMPUTER'S TURN
+COMPUTER'S GAMEBOARD:
+ M M ~ M M ! ~ M
+ M ~ ~ ~ M ! M M
+ M M ~ M ! ! ~ M
+ M M ~ M ! ! M ~
+ ~ M ~ M ~ M M M
+ ~ M ! M ~ ~ M M
+ M ~ M ~ ~ ~ ~ M
+ ~ M M ~ M ~ ~ ~
+
+prevMove is not a hit - get random move.
+Invalid Move Detected
+Already shot here!
+Invalid Move Detected
+Already shot here!
+Valid Move Detected
+Valid Move Detected
+~~~~~~~ MISS ~~~~~~~
+COMPUTER HAS FIRED!
+ M M ~ M M ! ~ M
+ M ~ ~ ~ M ! M M
+ M M ~ M ! ! ~ M
+ M M ~ M ! ! M ~
+ ~ M ~ M ~ M M M
+ ~ M ! M ~ ~ M M
+ M ~ M ~ ~ ~ ~ M
+ ~ M M ~ M ~ ~ M
+
+
+
+
+USER'S TURN
+USER'S GAMEBOARD:
+ ! ! ! ! M M M M
+ M M ! ! ~ ! M M
+ M M M M M M ! M
+ M M M M M M ! M
+ M M M M M M ! M
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+
+Select a row to fire in (1 -> 8) : 
+6
+Select a column to fire in ((1 -> 8) : 
+1
+Valid Move Detected
+Valid Move Detected
+~~~~~~~ MISS ~~~~~~~
+USER HAS FIRED!
+ ! ! ! ! M M M M
+ M M ! ! ~ ! M M
+ M M M M M M ! M
+ M M M M M M ! M
+ M M M M M M ! M
+ M ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+
+
+
+
+COMPUTER'S TURN
+COMPUTER'S GAMEBOARD:
+ M M ~ M M ! ~ M
+ M ~ ~ ~ M ! M M
+ M M ~ M ! ! ~ M
+ M M ~ M ! ! M ~
+ ~ M ~ M ~ M M M
+ ~ M ! M ~ ~ M M
+ M ~ M ~ ~ ~ ~ M
+ ~ M M ~ M ~ ~ M
+
+prevMove is not a hit - get random move.
+Valid Move Detected
+Valid Move Detected
+~~~~~~~ MISS ~~~~~~~
+COMPUTER HAS FIRED!
+ M M ~ M M ! M M
+ M ~ ~ ~ M ! M M
+ M M ~ M ! ! ~ M
+ M M ~ M ! ! M ~
+ ~ M ~ M ~ M M M
+ ~ M ! M ~ ~ M M
+ M ~ M ~ ~ ~ ~ M
+ ~ M M ~ M ~ ~ M
+
+
+
+
+USER'S TURN
+USER'S GAMEBOARD:
+ ! ! ! ! M M M M
+ M M ! ! ~ ! M M
+ M M M M M M ! M
+ M M M M M M ! M
+ M M M M M M ! M
+ M ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+
+Select a row to fire in (1 -> 8) : 
+6
+Select a column to fire in ((1 -> 8) : 
+2
+Valid Move Detected
+Valid Move Detected
+~~~~~~~ MISS ~~~~~~~
+USER HAS FIRED!
+ ! ! ! ! M M M M
+ M M ! ! ~ ! M M
+ M M M M M M ! M
+ M M M M M M ! M
+ M M M M M M ! M
+ M M ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+
+
+
+
+COMPUTER'S TURN
+COMPUTER'S GAMEBOARD:
+ M M ~ M M ! M M
+ M ~ ~ ~ M ! M M
+ M M ~ M ! ! ~ M
+ M M ~ M ! ! M ~
+ ~ M ~ M ~ M M M
+ ~ M ! M ~ ~ M M
+ M ~ M ~ ~ ~ ~ M
+ ~ M M ~ M ~ ~ M
+
+prevMove is not a hit - get random move.
+Invalid Move Detected
+Already shot here!
+Invalid Move Detected
+Already shot here!
+Invalid Move Detected
+Already shot here!
+Valid Move Detected
+Valid Move Detected
+~~~~~~~ MISS ~~~~~~~
+COMPUTER HAS FIRED!
+ M M ~ M M ! M M
+ M ~ ~ ~ M ! M M
+ M M ~ M ! ! ~ M
+ M M ~ M ! ! M ~
+ ~ M ~ M ~ M M M
+ M M ! M ~ ~ M M
+ M ~ M ~ ~ ~ ~ M
+ ~ M M ~ M ~ ~ M
+
+
+
+
+USER'S TURN
+USER'S GAMEBOARD:
+ ! ! ! ! M M M M
+ M M ! ! ~ ! M M
+ M M M M M M ! M
+ M M M M M M ! M
+ M M M M M M ! M
+ M M ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+
+Select a row to fire in (1 -> 8) : 
+6
+Select a column to fire in ((1 -> 8) : 
+3
+Valid Move Detected
+Valid Move Detected
+~~~~~~~ MISS ~~~~~~~
+USER HAS FIRED!
+ ! ! ! ! M M M M
+ M M ! ! ~ ! M M
+ M M M M M M ! M
+ M M M M M M ! M
+ M M M M M M ! M
+ M M M ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+
+
+
+
+COMPUTER'S TURN
+COMPUTER'S GAMEBOARD:
+ M M ~ M M ! M M
+ M ~ ~ ~ M ! M M
+ M M ~ M ! ! ~ M
+ M M ~ M ! ! M ~
+ ~ M ~ M ~ M M M
+ M M ! M ~ ~ M M
+ M ~ M ~ ~ ~ ~ M
+ ~ M M ~ M ~ ~ M
+
+prevMove is not a hit - get random move.
+Invalid Move Detected
+Already shot here!
+Valid Move Detected
+Valid Move Detected
+~~~~~~~ HIT ~~~~~~~
+COMPUTER HAS FIRED!
+ M M ~ M M ! M M
+ M ~ ~ ~ M ! M M
+ M M ~ M ! ! ~ M
+ M M ~ M ! ! M ~
+ ~ M ~ M ~ M M M
+ M M ! M ! ~ M M
+ M ~ M ~ ~ ~ ~ M
+ ~ M M ~ M ~ ~ M
+
+
+
+
+USER'S TURN
+USER'S GAMEBOARD:
+ ! ! ! ! M M M M
+ M M ! ! ~ ! M M
+ M M M M M M ! M
+ M M M M M M ! M
+ M M M M M M ! M
+ M M M ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+
+Select a row to fire in (1 -> 8) : 
+6
+Select a column to fire in ((1 -> 8) : 
+4
+Valid Move Detected
+Valid Move Detected
+~~~~~~~ MISS ~~~~~~~
+USER HAS FIRED!
+ ! ! ! ! M M M M
+ M M ! ! ~ ! M M
+ M M M M M M ! M
+ M M M M M M ! M
+ M M M M M M ! M
+ M M M M ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+
+
+
+
+COMPUTER'S TURN
+COMPUTER'S GAMEBOARD:
+ M M ~ M M ! M M
+ M ~ ~ ~ M ! M M
+ M M ~ M ! ! ~ M
+ M M ~ M ! ! M ~
+ ~ M ~ M ~ M M M
+ M M ! M ! ~ M M
+ M ~ M ~ ~ ~ ~ M
+ ~ M M ~ M ~ ~ M
+
+prevMove.isHit: 6, 5
+Trying localMove 6, 4
+Invalid Move Detected
+Already shot here!
+Trying localMove 6, 6
+Valid Move Detected
+Returning local E: 6, 6
+Valid Move Detected
+nextMove.isValid: 6, 6
+Placing next local move: 6, 6
+Valid Move Detected
+~~~~~~~ MISS ~~~~~~~
+COMPUTER HAS FIRED!
+ M M ~ M M ! M M
+ M ~ ~ ~ M ! M M
+ M M ~ M ! ! ~ M
+ M M ~ M ! ! M ~
+ ~ M ~ M ~ M M M
+ M M ! M ! M M M
+ M ~ M ~ ~ ~ ~ M
+ ~ M M ~ M ~ ~ M
+
+
+
+
+USER'S TURN
+USER'S GAMEBOARD:
+ ! ! ! ! M M M M
+ M M ! ! ~ ! M M
+ M M M M M M ! M
+ M M M M M M ! M
+ M M M M M M ! M
+ M M M M ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+
+Select a row to fire in (1 -> 8) : 
+6
+Select a column to fire in ((1 -> 8) : 
+6
+Valid Move Detected
+Valid Move Detected
+~~~~~~~ MISS ~~~~~~~
+USER HAS FIRED!
+ ! ! ! ! M M M M
+ M M ! ! ~ ! M M
+ M M M M M M ! M
+ M M M M M M ! M
+ M M M M M M ! M
+ M M M M ~ M ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+
+
+
+
+COMPUTER'S TURN
+COMPUTER'S GAMEBOARD:
+ M M ~ M M ! M M
+ M ~ ~ ~ M ! M M
+ M M ~ M ! ! ~ M
+ M M ~ M ! ! M ~
+ ~ M ~ M ~ M M M
+ M M ! M ! M M M
+ M ~ M ~ ~ ~ ~ M
+ ~ M M ~ M ~ ~ M
+
+prevMove is not a hit - get random move.
+Invalid Move Detected
+Already shot here!
+Invalid Move Detected
+Already shot here!
+Invalid Move Detected
+Already shot here!
+Invalid Move Detected
+Already shot here!
+Invalid Move Detected
+Already shot here!
+Invalid Move Detected
+Already shot here!
+Invalid Move Detected
+Already shot here!
+Invalid Move Detected
+Already shot here!
+Invalid Move Detected
+Already shot here!
+Valid Move Detected
+Valid Move Detected
+~~~~~~~ MISS ~~~~~~~
+COMPUTER HAS FIRED!
+ M M ~ M M ! M M
+ M ~ ~ ~ M ! M M
+ M M ~ M ! ! ~ M
+ M M ~ M ! ! M ~
+ ~ M ~ M ~ M M M
+ M M ! M ! M M M
+ M ~ M ~ ~ M ~ M
+ ~ M M ~ M ~ ~ M
+
+
+
+
+USER'S TURN
+USER'S GAMEBOARD:
+ ! ! ! ! M M M M
+ M M ! ! ~ ! M M
+ M M M M M M ! M
+ M M M M M M ! M
+ M M M M M M ! M
+ M M M M ~ M ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+
+Select a row to fire in (1 -> 8) : 
+6
+Select a column to fire in ((1 -> 8) : 
+5
+Valid Move Detected
+Valid Move Detected
+~~~~~~~ MISS ~~~~~~~
+USER HAS FIRED!
+ ! ! ! ! M M M M
+ M M ! ! ~ ! M M
+ M M M M M M ! M
+ M M M M M M ! M
+ M M M M M M ! M
+ M M M M M M ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+
+
+
+
+COMPUTER'S TURN
+COMPUTER'S GAMEBOARD:
+ M M ~ M M ! M M
+ M ~ ~ ~ M ! M M
+ M M ~ M ! ! ~ M
+ M M ~ M ! ! M ~
+ ~ M ~ M ~ M M M
+ M M ! M ! M M M
+ M ~ M ~ ~ M ~ M
+ ~ M M ~ M ~ ~ M
+
+prevMove is not a hit - get random move.
+Invalid Move Detected
+Already shot here!
+Invalid Move Detected
+Already shot here!
+Invalid Move Detected
+Already shot here!
+Valid Move Detected
+Valid Move Detected
+~~~~~~~ HIT ~~~~~~~
+COMPUTER HAS FIRED!
+ M M ~ M M ! M M
+ M ~ ~ ~ M ! M M
+ M M ! M ! ! ~ M
+ M M ~ M ! ! M ~
+ ~ M ~ M ~ M M M
+ M M ! M ! M M M
+ M ~ M ~ ~ M ~ M
+ ~ M M ~ M ~ ~ M
+
+
+
+
+USER'S TURN
+USER'S GAMEBOARD:
+ ! ! ! ! M M M M
+ M M ! ! ~ ! M M
+ M M M M M M ! M
+ M M M M M M ! M
+ M M M M M M ! M
+ M M M M M M ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+
+Select a row to fire in (1 -> 8) : 
+6
+Select a column to fire in ((1 -> 8) : 
+7
+Valid Move Detected
+Valid Move Detected
+~~~~~~~ HIT ~~~~~~~
+USER HAS FIRED!
+ ! ! ! ! M M M M
+ M M ! ! ~ ! M M
+ M M M M M M ! M
+ M M M M M M ! M
+ M M M M M M ! M
+ M M M M M M ! ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+
+
+
+
+COMPUTER'S TURN
+COMPUTER'S GAMEBOARD:
+ M M ~ M M ! M M
+ M ~ ~ ~ M ! M M
+ M M ! M ! ! ~ M
+ M M ~ M ! ! M ~
+ ~ M ~ M ~ M M M
+ M M ! M ! M M M
+ M ~ M ~ ~ M ~ M
+ ~ M M ~ M ~ ~ M
+
+prevMove.isHit: 3, 3
+Trying localMove 3, 2
+Invalid Move Detected
+Already shot here!
+Trying localMove 3, 4
+Invalid Move Detected
+Already shot here!
+Trying localMove 2, 3
+Valid Move Detected
+Returning local S: 2, 3
+Valid Move Detected
+nextMove.isValid: 2, 3
+Placing next local move: 2, 3
+Valid Move Detected
+~~~~~~~ MISS ~~~~~~~
+COMPUTER HAS FIRED!
+ M M ~ M M ! M M
+ M ~ M ~ M ! M M
+ M M ! M ! ! ~ M
+ M M ~ M ! ! M ~
+ ~ M ~ M ~ M M M
+ M M ! M ! M M M
+ M ~ M ~ ~ M ~ M
+ ~ M M ~ M ~ ~ M
+
+
+
+
+USER'S TURN
+USER'S GAMEBOARD:
+ ! ! ! ! M M M M
+ M M ! ! ~ ! M M
+ M M M M M M ! M
+ M M M M M M ! M
+ M M M M M M ! M
+ M M M M M M ! ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+
+Select a row to fire in (1 -> 8) : 
+6
+Select a column to fire in ((1 -> 8) : 
+8
+Valid Move Detected
+Valid Move Detected
+~~~~~~~ MISS ~~~~~~~
+USER HAS FIRED!
+ ! ! ! ! M M M M
+ M M ! ! ~ ! M M
+ M M M M M M ! M
+ M M M M M M ! M
+ M M M M M M ! M
+ M M M M M M ! M
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+
+
+
+
+COMPUTER'S TURN
+COMPUTER'S GAMEBOARD:
+ M M ~ M M ! M M
+ M ~ M ~ M ! M M
+ M M ! M ! ! ~ M
+ M M ~ M ! ! M ~
+ ~ M ~ M ~ M M M
+ M M ! M ! M M M
+ M ~ M ~ ~ M ~ M
+ ~ M M ~ M ~ ~ M
+
+prevMove is not a hit - get random move.
+Invalid Move Detected
+Already shot here!
+Invalid Move Detected
+Already shot here!
+Valid Move Detected
+Valid Move Detected
+~~~~~~~ MISS ~~~~~~~
+COMPUTER HAS FIRED!
+ M M ~ M M ! M M
+ M ~ M ~ M ! M M
+ M M ! M ! ! ~ M
+ M M ~ M ! ! M ~
+ ~ M ~ M ~ M M M
+ M M ! M ! M M M
+ M ~ M ~ ~ M ~ M
+ ~ M M ~ M M ~ M
+
+
+
+
+USER'S TURN
+USER'S GAMEBOARD:
+ ! ! ! ! M M M M
+ M M ! ! ~ ! M M
+ M M M M M M ! M
+ M M M M M M ! M
+ M M M M M M ! M
+ M M M M M M ! M
+ ~ ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+
+Select a row to fire in (1 -> 8) : 
+7
+Select a column to fire in ((1 -> 8) : 
+1
+Valid Move Detected
+Valid Move Detected
+~~~~~~~ MISS ~~~~~~~
+USER HAS FIRED!
+ ! ! ! ! M M M M
+ M M ! ! ~ ! M M
+ M M M M M M ! M
+ M M M M M M ! M
+ M M M M M M ! M
+ M M M M M M ! M
+ M ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+
+
+
+
+COMPUTER'S TURN
+COMPUTER'S GAMEBOARD:
+ M M ~ M M ! M M
+ M ~ M ~ M ! M M
+ M M ! M ! ! ~ M
+ M M ~ M ! ! M ~
+ ~ M ~ M ~ M M M
+ M M ! M ! M M M
+ M ~ M ~ ~ M ~ M
+ ~ M M ~ M M ~ M
+
+prevMove is not a hit - get random move.
+Invalid Move Detected
+Already shot here!
+Invalid Move Detected
+Already shot here!
+Invalid Move Detected
+Already shot here!
+Invalid Move Detected
+Already shot here!
+Invalid Move Detected
+Already shot here!
+Valid Move Detected
+Valid Move Detected
+~~~~~~~ MISS ~~~~~~~
+COMPUTER HAS FIRED!
+ M M ~ M M ! M M
+ M ~ M ~ M ! M M
+ M M ! M ! ! ~ M
+ M M ~ M ! ! M ~
+ ~ M ~ M ~ M M M
+ M M ! M ! M M M
+ M ~ M M ~ M ~ M
+ ~ M M ~ M M ~ M
+
+
+
+
+USER'S TURN
+USER'S GAMEBOARD:
+ ! ! ! ! M M M M
+ M M ! ! ~ ! M M
+ M M M M M M ! M
+ M M M M M M ! M
+ M M M M M M ! M
+ M M M M M M ! M
+ M ~ ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+
+Select a row to fire in (1 -> 8) : 
+7
+Select a column to fire in ((1 -> 8) : 
+2
+Valid Move Detected
+Valid Move Detected
+~~~~~~~ MISS ~~~~~~~
+USER HAS FIRED!
+ ! ! ! ! M M M M
+ M M ! ! ~ ! M M
+ M M M M M M ! M
+ M M M M M M ! M
+ M M M M M M ! M
+ M M M M M M ! M
+ M M ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+
+
+
+
+COMPUTER'S TURN
+COMPUTER'S GAMEBOARD:
+ M M ~ M M ! M M
+ M ~ M ~ M ! M M
+ M M ! M ! ! ~ M
+ M M ~ M ! ! M ~
+ ~ M ~ M ~ M M M
+ M M ! M ! M M M
+ M ~ M M ~ M ~ M
+ ~ M M ~ M M ~ M
+
+prevMove is not a hit - get random move.
+Invalid Move Detected
+Already shot here!
+Valid Move Detected
+Valid Move Detected
+~~~~~~~ HIT ~~~~~~~
+COMPUTER HAS FIRED!
+ M M ~ M M ! M M
+ M ~ M ~ M ! M M
+ M M ! M ! ! ~ M
+ M M ! M ! ! M ~
+ ~ M ~ M ~ M M M
+ M M ! M ! M M M
+ M ~ M M ~ M ~ M
+ ~ M M ~ M M ~ M
+
+
+
+
+USER'S TURN
+USER'S GAMEBOARD:
+ ! ! ! ! M M M M
+ M M ! ! ~ ! M M
+ M M M M M M ! M
+ M M M M M M ! M
+ M M M M M M ! M
+ M M M M M M ! M
+ M M ~ ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+
+Select a row to fire in (1 -> 8) : 
+7
+Select a column to fire in ((1 -> 8) : 
+3
+Valid Move Detected
+Valid Move Detected
+~~~~~~~ MISS ~~~~~~~
+USER HAS FIRED!
+ ! ! ! ! M M M M
+ M M ! ! ~ ! M M
+ M M M M M M ! M
+ M M M M M M ! M
+ M M M M M M ! M
+ M M M M M M ! M
+ M M M ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+
+
+
+
+COMPUTER'S TURN
+COMPUTER'S GAMEBOARD:
+ M M ~ M M ! M M
+ M ~ M ~ M ! M M
+ M M ! M ! ! ~ M
+ M M ! M ! ! M ~
+ ~ M ~ M ~ M M M
+ M M ! M ! M M M
+ M ~ M M ~ M ~ M
+ ~ M M ~ M M ~ M
+
+prevMove.isHit: 4, 3
+Trying localMove 4, 2
+Invalid Move Detected
+Already shot here!
+Trying localMove 4, 4
+Invalid Move Detected
+Already shot here!
+Trying localMove 3, 3
+Invalid Move Detected
+Already shot here!
+Trying localMove 5, 3
+Valid Move Detected
+Returning local N: 5, 3
+Valid Move Detected
+nextMove.isValid: 5, 3
+Placing next local move: 5, 3
+Valid Move Detected
+~~~~~~~ HIT ~~~~~~~
+COMPUTER HAS FIRED!
+ M M ~ M M ! M M
+ M ~ M ~ M ! M M
+ M M ! M ! ! ~ M
+ M M ! M ! ! M ~
+ ~ M ! M ~ M M M
+ M M ! M ! M M M
+ M ~ M M ~ M ~ M
+ ~ M M ~ M M ~ M
+
+
+
+
+USER'S TURN
+USER'S GAMEBOARD:
+ ! ! ! ! M M M M
+ M M ! ! ~ ! M M
+ M M M M M M ! M
+ M M M M M M ! M
+ M M M M M M ! M
+ M M M M M M ! M
+ M M M ~ ~ ~ ~ ~
+ ~ ~ ~ ~ ~ ~ ~ ~
+
+Select a row to fire in (1 -> 8) : 
+8
+Select a column to fire in ((1 -> 8) : 
+1
+Valid Move Detected
+Valid Move Detected
+~~~~~~~ MISS ~~~~~~~
+USER HAS FIRED!
+ ! ! ! ! M M M M
+ M M ! ! ~ ! M M
+ M M M M M M ! M
+ M M M M M M ! M
+ M M M M M M ! M
+ M M M M M M ! M
+ M M M ~ ~ ~ ~ ~
+ M ~ ~ ~ ~ ~ ~ ~
+
+
+
+
+COMPUTER'S TURN
+COMPUTER'S GAMEBOARD:
+ M M ~ M M ! M M
+ M ~ M ~ M ! M M
+ M M ! M ! ! ~ M
+ M M ! M ! ! M ~
+ ~ M ! M ~ M M M
+ M M ! M ! M M M
+ M ~ M M ~ M ~ M
+ ~ M M ~ M M ~ M
+
+prevMove.isHit: 5, 3
+Trying localMove 5, 2
+Invalid Move Detected
+Already shot here!
+Trying localMove 5, 4
+Invalid Move Detected
+Already shot here!
+Trying localMove 4, 3
+Invalid Move Detected
+Already shot here!
+Trying localMove 6, 3
+Invalid Move Detected
+Already shot here!
+Returning Invalid Local Move: 0, 0
+Invalid Move Detected
+Stay Within Grid!
+Local move not valid, return to random move.
+Invalid Move Detected
+Stay Within Grid!
+Invalid Move Detected
+Already shot here!
+Invalid Move Detected
+Already shot here!
+Valid Move Detected
+Placing random shot: 8, 4
+Valid Move Detected
+~~~~~~~ MISS ~~~~~~~
+COMPUTER HAS FIRED!
+ M M ~ M M ! M M
+ M ~ M ~ M ! M M
+ M M ! M ! ! ~ M
+ M M ! M ! ! M ~
+ ~ M ! M ~ M M M
+ M M ! M ! M M M
+ M ~ M M ~ M ~ M
+ ~ M M M M M ~ M
+
+
+
+
+USER'S TURN
+USER'S GAMEBOARD:
+ ! ! ! ! M M M M
+ M M ! ! ~ ! M M
+ M M M M M M ! M
+ M M M M M M ! M
+ M M M M M M ! M
+ M M M M M M ! M
+ M M M ~ ~ ~ ~ ~
+ M ~ ~ ~ ~ ~ ~ ~
+
+Select a row to fire in (1 -> 8) : 
+8
+Select a column to fire in ((1 -> 8) : 
+2
+Valid Move Detected
+Valid Move Detected
+~~~~~~~ MISS ~~~~~~~
+USER HAS FIRED!
+ ! ! ! ! M M M M
+ M M ! ! ~ ! M M
+ M M M M M M ! M
+ M M M M M M ! M
+ M M M M M M ! M
+ M M M M M M ! M
+ M M M ~ ~ ~ ~ ~
+ M M ~ ~ ~ ~ ~ ~
+
+
+
+
+COMPUTER'S TURN
+COMPUTER'S GAMEBOARD:
+ M M ~ M M ! M M
+ M ~ M ~ M ! M M
+ M M ! M ! ! ~ M
+ M M ! M ! ! M ~
+ ~ M ! M ~ M M M
+ M M ! M ! M M M
+ M ~ M M ~ M ~ M
+ ~ M M M M M ~ M
+
+prevMove is not a hit - get random move.
+Invalid Move Detected
+Already shot here!
+Invalid Move Detected
+Already shot here!
+Invalid Move Detected
+Already shot here!
+Invalid Move Detected
+Already shot here!
+Invalid Move Detected
+Already shot here!
+Invalid Move Detected
+Already shot here!
+Invalid Move Detected
+Already shot here!
+Valid Move Detected
+Valid Move Detected
+~~~~~~~ MISS ~~~~~~~
+COMPUTER HAS FIRED!
+ M M ~ M M ! M M
+ M ~ M ~ M ! M M
+ M M ! M ! ! M M
+ M M ! M ! ! M ~
+ ~ M ! M ~ M M M
+ M M ! M ! M M M
+ M ~ M M ~ M ~ M
+ ~ M M M M M ~ M
+
+
+
+
+USER'S TURN
+USER'S GAMEBOARD:
+ ! ! ! ! M M M M
+ M M ! ! ~ ! M M
+ M M M M M M ! M
+ M M M M M M ! M
+ M M M M M M ! M
+ M M M M M M ! M
+ M M M ~ ~ ~ ~ ~
+ M M ~ ~ ~ ~ ~ ~
+
+Select a row to fire in (1 -> 8) : 
+8
+Select a column to fire in ((1 -> 8) : 
+3
+Valid Move Detected
+Valid Move Detected
+~~~~~~~ MISS ~~~~~~~
+USER HAS FIRED!
+ ! ! ! ! M M M M
+ M M ! ! ~ ! M M
+ M M M M M M ! M
+ M M M M M M ! M
+ M M M M M M ! M
+ M M M M M M ! M
+ M M M ~ ~ ~ ~ ~
+ M M M ~ ~ ~ ~ ~
+
+
+
+
+COMPUTER'S TURN
+COMPUTER'S GAMEBOARD:
+ M M ~ M M ! M M
+ M ~ M ~ M ! M M
+ M M ! M ! ! M M
+ M M ! M ! ! M ~
+ ~ M ! M ~ M M M
+ M M ! M ! M M M
+ M ~ M M ~ M ~ M
+ ~ M M M M M ~ M
+
+prevMove is not a hit - get random move.
+Invalid Move Detected
+Already shot here!
+Invalid Move Detected
+Already shot here!
+Valid Move Detected
+Valid Move Detected
+~~~~~~~ MISS ~~~~~~~
+COMPUTER HAS FIRED!
+ M M M M M ! M M
+ M ~ M ~ M ! M M
+ M M ! M ! ! M M
+ M M ! M ! ! M ~
+ ~ M ! M ~ M M M
+ M M ! M ! M M M
+ M ~ M M ~ M ~ M
+ ~ M M M M M ~ M
+
+
+
+
+USER'S TURN
+USER'S GAMEBOARD:
+ ! ! ! ! M M M M
+ M M ! ! ~ ! M M
+ M M M M M M ! M
+ M M M M M M ! M
+ M M M M M M ! M
+ M M M M M M ! M
+ M M M ~ ~ ~ ~ ~
+ M M M ~ ~ ~ ~ ~
+
+Select a row to fire in (1 -> 8) : 
+8
+Select a column to fire in ((1 -> 8) : 
+4
+Valid Move Detected
+Valid Move Detected
+~~~~~~~ MISS ~~~~~~~
+USER HAS FIRED!
+ ! ! ! ! M M M M
+ M M ! ! ~ ! M M
+ M M M M M M ! M
+ M M M M M M ! M
+ M M M M M M ! M
+ M M M M M M ! M
+ M M M ~ ~ ~ ~ ~
+ M M M M ~ ~ ~ ~
+
+
+
+
+COMPUTER'S TURN
+COMPUTER'S GAMEBOARD:
+ M M M M M ! M M
+ M ~ M ~ M ! M M
+ M M ! M ! ! M M
+ M M ! M ! ! M ~
+ ~ M ! M ~ M M M
+ M M ! M ! M M M
+ M ~ M M ~ M ~ M
+ ~ M M M M M ~ M
+
+prevMove is not a hit - get random move.
+Invalid Move Detected
+Already shot here!
+Invalid Move Detected
+Already shot here!
+Invalid Move Detected
+Already shot here!
+Invalid Move Detected
+Already shot here!
+Invalid Move Detected
+Already shot here!
+Valid Move Detected
+Valid Move Detected
+~~~~~~~ MISS ~~~~~~~
+COMPUTER HAS FIRED!
+ M M M M M ! M M
+ M ~ M ~ M ! M M
+ M M ! M ! ! M M
+ M M ! M ! ! M ~
+ M M ! M ~ M M M
+ M M ! M ! M M M
+ M ~ M M ~ M ~ M
+ ~ M M M M M ~ M
+
+
+
+
+USER'S TURN
+USER'S GAMEBOARD:
+ ! ! ! ! M M M M
+ M M ! ! ~ ! M M
+ M M M M M M ! M
+ M M M M M M ! M
+ M M M M M M ! M
+ M M M M M M ! M
+ M M M ~ ~ ~ ~ ~
+ M M M M ~ ~ ~ ~
+
+Select a row to fire in (1 -> 8) : 
+8
+Select a column to fire in ((1 -> 8) : 
+5
+Valid Move Detected
+Valid Move Detected
+~~~~~~~ MISS ~~~~~~~
+USER HAS FIRED!
+ ! ! ! ! M M M M
+ M M ! ! ~ ! M M
+ M M M M M M ! M
+ M M M M M M ! M
+ M M M M M M ! M
+ M M M M M M ! M
+ M M M ~ ~ ~ ~ ~
+ M M M M M ~ ~ ~
+
+
+
+
+COMPUTER'S TURN
+COMPUTER'S GAMEBOARD:
+ M M M M M ! M M
+ M ~ M ~ M ! M M
+ M M ! M ! ! M M
+ M M ! M ! ! M ~
+ M M ! M ~ M M M
+ M M ! M ! M M M
+ M ~ M M ~ M ~ M
+ ~ M M M M M ~ M
+
+prevMove is not a hit - get random move.
+Invalid Move Detected
+Already shot here!
+Invalid Move Detected
+Already shot here!
+Invalid Move Detected
+Already shot here!
+Invalid Move Detected
+Already shot here!
+Invalid Move Detected
+Already shot here!
+Invalid Move Detected
+Already shot here!
+Invalid Move Detected
+Already shot here!
+Invalid Move Detected
+Already shot here!
+Invalid Move Detected
+Already shot here!
+Invalid Move Detected
+Already shot here!
+Invalid Move Detected
+Already shot here!
+Invalid Move Detected
+Already shot here!
+Invalid Move Detected
+Already shot here!
+Invalid Move Detected
+Already shot here!
+Invalid Move Detected
+Already shot here!
+Invalid Move Detected
+Already shot here!
+Valid Move Detected
+Valid Move Detected
+~~~~~~~ MISS ~~~~~~~
+COMPUTER HAS FIRED!
+ M M M M M ! M M
+ M ~ M ~ M ! M M
+ M M ! M ! ! M M
+ M M ! M ! ! M ~
+ M M ! M ~ M M M
+ M M ! M ! M M M
+ M ~ M M ~ M ~ M
+ M M M M M M ~ M
+
+
+
+
+USER'S TURN
+USER'S GAMEBOARD:
+ ! ! ! ! M M M M
+ M M ! ! ~ ! M M
+ M M M M M M ! M
+ M M M M M M ! M
+ M M M M M M ! M
+ M M M M M M ! M
+ M M M ~ ~ ~ ~ ~
+ M M M M M ~ ~ ~
+
+Select a row to fire in (1 -> 8) : 
+8
+Select a column to fire in ((1 -> 8) : 
+6
+Valid Move Detected
+Valid Move Detected
+~~~~~~~ MISS ~~~~~~~
+USER HAS FIRED!
+ ! ! ! ! M M M M
+ M M ! ! ~ ! M M
+ M M M M M M ! M
+ M M M M M M ! M
+ M M M M M M ! M
+ M M M M M M ! M
+ M M M ~ ~ ~ ~ ~
+ M M M M M M ~ ~
+
+
+
+
+COMPUTER'S TURN
+COMPUTER'S GAMEBOARD:
+ M M M M M ! M M
+ M ~ M ~ M ! M M
+ M M ! M ! ! M M
+ M M ! M ! ! M ~
+ M M ! M ~ M M M
+ M M ! M ! M M M
+ M ~ M M ~ M ~ M
+ M M M M M M ~ M
+
+prevMove is not a hit - get random move.
+Invalid Move Detected
+Already shot here!
+Invalid Move Detected
+Already shot here!
+Invalid Move Detected
+Already shot here!
+Invalid Move Detected
+Already shot here!
+Invalid Move Detected
+Already shot here!
+Invalid Move Detected
+Already shot here!
+Valid Move Detected
+Valid Move Detected
+~~~~~~~ MISS ~~~~~~~
+COMPUTER HAS FIRED!
+ M M M M M ! M M
+ M ~ M ~ M ! M M
+ M M ! M ! ! M M
+ M M ! M ! ! M ~
+ M M ! M ~ M M M
+ M M ! M ! M M M
+ M ~ M M ~ M ~ M
+ M M M M M M M M
+
+
+
+
+USER'S TURN
+USER'S GAMEBOARD:
+ ! ! ! ! M M M M
+ M M ! ! ~ ! M M
+ M M M M M M ! M
+ M M M M M M ! M
+ M M M M M M ! M
+ M M M M M M ! M
+ M M M ~ ~ ~ ~ ~
+ M M M M M M ~ ~
+
+Select a row to fire in (1 -> 8) : 
+8
+Select a column to fire in ((1 -> 8) : 
+7
+Valid Move Detected
+Valid Move Detected
+~~~~~~~ MISS ~~~~~~~
+USER HAS FIRED!
+ ! ! ! ! M M M M
+ M M ! ! ~ ! M M
+ M M M M M M ! M
+ M M M M M M ! M
+ M M M M M M ! M
+ M M M M M M ! M
+ M M M ~ ~ ~ ~ ~
+ M M M M M M M ~
+
+
+
+
+COMPUTER'S TURN
+COMPUTER'S GAMEBOARD:
+ M M M M M ! M M
+ M ~ M ~ M ! M M
+ M M ! M ! ! M M
+ M M ! M ! ! M ~
+ M M ! M ~ M M M
+ M M ! M ! M M M
+ M ~ M M ~ M ~ M
+ M M M M M M M M
+
+prevMove is not a hit - get random move.
+Invalid Move Detected
+Already shot here!
+Invalid Move Detected
+Already shot here!
+Invalid Move Detected
+Already shot here!
+Invalid Move Detected
+Already shot here!
+Invalid Move Detected
+Already shot here!
+Valid Move Detected
+Valid Move Detected
+~~~~~~~ MISS ~~~~~~~
+COMPUTER HAS FIRED!
+ M M M M M ! M M
+ M ~ M ~ M ! M M
+ M M ! M ! ! M M
+ M M ! M ! ! M M
+ M M ! M ~ M M M
+ M M ! M ! M M M
+ M ~ M M ~ M ~ M
+ M M M M M M M M
+
+
+
+
+USER'S TURN
+USER'S GAMEBOARD:
+ ! ! ! ! M M M M
+ M M ! ! ~ ! M M
+ M M M M M M ! M
+ M M M M M M ! M
+ M M M M M M ! M
+ M M M M M M ! M
+ M M M ~ ~ ~ ~ ~
+ M M M M M M M ~
+
+Select a row to fire in (1 -> 8) : 
+8
+Select a column to fire in ((1 -> 8) : 
+8
+Valid Move Detected
+Valid Move Detected
+~~~~~~~ MISS ~~~~~~~
+USER HAS FIRED!
+ ! ! ! ! M M M M
+ M M ! ! ~ ! M M
+ M M M M M M ! M
+ M M M M M M ! M
+ M M M M M M ! M
+ M M M M M M ! M
+ M M M ~ ~ ~ ~ ~
+ M M M M M M M M
+
+
+
+
+COMPUTER'S TURN
+COMPUTER'S GAMEBOARD:
+ M M M M M ! M M
+ M ~ M ~ M ! M M
+ M M ! M ! ! M M
+ M M ! M ! ! M M
+ M M ! M ~ M M M
+ M M ! M ! M M M
+ M ~ M M ~ M ~ M
+ M M M M M M M M
+
+prevMove is not a hit - get random move.
+Invalid Move Detected
+Already shot here!
+Invalid Move Detected
+Already shot here!
+Invalid Move Detected
+Already shot here!
+Invalid Move Detected
+Already shot here!
+Invalid Move Detected
+Already shot here!
+Invalid Move Detected
+Already shot here!
+Invalid Move Detected
+Already shot here!
+Invalid Move Detected
+Already shot here!
+Invalid Move Detected
+Already shot here!
+Invalid Move Detected
+Already shot here!
+Invalid Move Detected
+Already shot here!
+Invalid Move Detected
+Already shot here!
+Invalid Move Detected
+Already shot here!
+Valid Move Detected
+Valid Move Detected
+~~~~~~~ MISS ~~~~~~~
+COMPUTER HAS FIRED!
+ M M M M M ! M M
+ M ~ M ~ M ! M M
+ M M ! M ! ! M M
+ M M ! M ! ! M M
+ M M ! M ~ M M M
+ M M ! M ! M M M
+ M ~ M M ~ M M M
+ M M M M M M M M
+
+
+
+
+USER'S TURN
+USER'S GAMEBOARD:
+ ! ! ! ! M M M M
+ M M ! ! ~ ! M M
+ M M M M M M ! M
+ M M M M M M ! M
+ M M M M M M ! M
+ M M M M M M ! M
+ M M M ~ ~ ~ ~ ~
+ M M M M M M M M
+
+Select a row to fire in (1 -> 8) : 
+7
+Select a column to fire in ((1 -> 8) : 
+4
+Valid Move Detected
+Valid Move Detected
+~~~~~~~ MISS ~~~~~~~
+USER HAS FIRED!
+ ! ! ! ! M M M M
+ M M ! ! ~ ! M M
+ M M M M M M ! M
+ M M M M M M ! M
+ M M M M M M ! M
+ M M M M M M ! M
+ M M M M ~ ~ ~ ~
+ M M M M M M M M
+
+
+
+
+COMPUTER'S TURN
+COMPUTER'S GAMEBOARD:
+ M M M M M ! M M
+ M ~ M ~ M ! M M
+ M M ! M ! ! M M
+ M M ! M ! ! M M
+ M M ! M ~ M M M
+ M M ! M ! M M M
+ M ~ M M ~ M M M
+ M M M M M M M M
+
+prevMove is not a hit - get random move.
+Invalid Move Detected
+Already shot here!
+Valid Move Detected
+Valid Move Detected
+~~~~~~~ HIT ~~~~~~~
+COMPUTER HAS FIRED!
+ M M M M M ! M M
+ M ~ M ~ M ! M M
+ M M ! M ! ! M M
+ M M ! M ! ! M M
+ M M ! M ! M M M
+ M M ! M ! M M M
+ M ~ M M ~ M M M
+ M M M M M M M M
+
+
+
+
+Sorry, but you've lost!.
+Computer fired 60
