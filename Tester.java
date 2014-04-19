@@ -10,7 +10,7 @@ import java.util.Scanner;
  *
  * @author Jonathan
  */
-public class Tester extends Player {
+public class Tester{
 
     public static void main(String[] arg) {
     	Scanner in = new Scanner(System.in);
