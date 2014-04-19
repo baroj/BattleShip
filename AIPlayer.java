@@ -5,7 +5,7 @@ import java.util.Random;
  * @author Jonathan and Justin
  *
  */
-public class AIPlayer {
+public class AIPlayer extends Player{
 
 	/**
 	 * Constructor creates computer player and initializes values.
@@ -14,11 +14,6 @@ public class AIPlayer {
 	public AIPlayer(int s){
 		generator = new Random();
 		skillLevel = s;
-		hits = 0;
-		shotsFired = 0;
-		nextMove = new Move(0,0);
-		prevMove = new Move(0,0);
-		//prevPrevMove = new Move(0,0);
 		System.out.println("Computer player constructed.");
 		System.out.print("Skill level chosen: ");
 		if(skillLevel==0){
@@ -31,9 +26,10 @@ public class AIPlayer {
 
 
 	/**
-	 * Calculates the next computer move
+	 * Calculates the next computer move based off chosen skill level and artificial intelligence.
+	 * @param board The game board being fired on to.
 	 */
-	public void compFire(Board board){
+	public void playerFire(Board board){
 		
 		//SKILL LEVEL BEGINNER - shot selections are random
 		if(skillLevel==0){	
@@ -46,7 +42,7 @@ public class AIPlayer {
 		
 		//SKILL LEVEL ADVANCED - computer utilizes battleship strategies
 		else{			
-			if(shotsFired == 0){	//If first shot of game, select shot at random
+			if(getShotsFired() == 0){	//If first shot of game, select shot at random
 				System.out.println("First shot of game.");
 				nextMove = getRandomMove();
 				while(!nextMove.isValidMove(board)){
@@ -95,40 +91,8 @@ public class AIPlayer {
 		}	
 	}
 
-	
-	/**
-     * Handles shot and increments player's hit counter and shotsFired counter accordingly.
-     * @param board Game board shot is being placed on.
-     * @param nextMove Coordinates of move being placed on grid.
-     */
-    public void placeShot(Board board, Move nextMove){
-		 board.updateGrid(nextMove);
-		 prevMove = nextMove;
-		 if(nextMove.isHit(board)){		//if grid update resulted in a hit - increment hits count
-			 hits++;					
-		 }
-		 shotsFired++;
-    }
-	
-	
-	  /**
-     * Gets current hit count.
-     * @return Total number of hits.
-     */
-	  public int getHitCount(){
-    	return hits;
-    }
-    
     /**
-     * 
-     * @return Total number of shots fired.
-     */
-    public int getShotsFired(){
-    	return shotsFired;
-    }
-
-    /**
-     * Generates a random Move object.
+     * Generates a random Move.
      * @return
      */
     public Move getRandomMove(){
@@ -189,11 +153,8 @@ public class AIPlayer {
    // private int localMoveCounter;	--> need way to check for another localMove if the first localMove is a miss
    //we want the computer to exhaust all 4 corners of the last hit before moving onto random shot selection
 	private Random generator;
-	private Move nextMove;
-	private Move prevMove;
 	private int skillLevel;
-	private int shotsFired;
-	private int hits;
+
 
 
 }
