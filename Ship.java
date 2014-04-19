@@ -1,10 +1,9 @@
-
 /**
  *Class responsible for generating ships and randomly placing them on the map.
  *
  * @author Jonathan and Justin
  */
-public class Ship extends Tester {
+public class Ship{
 
     /**
      * Creates desired number of ships and randomly determines their size, orientation, and location on board.
