@@ -10,7 +10,7 @@ public class Ship{
      * @param board The game board where ships are being placed.
      * @param size The size of the game board being used.
      */
-    public void createShip(Board board, int size) {
+    public static void createShip(Board board, int size) {
     	//I changed it to 3 ships to simplify things
     	//******************************************
     	shipSize = size;
@@ -60,7 +60,7 @@ public class Ship{
      * @param orientation Random number that determines horizontal vs. vertical orientation
      * @return True if no ship exists at this location.
      */
-    public boolean isValidShipPlacement(Board board, int row, int col, double orientation){
+    public static boolean isValidShipPlacement(Board board, int row, int col, double orientation){
     	if (orientation < 0.5){	//if orientation is horizontal
     		for(int i = 0; i < shipSize; i++){   		
     			if(board.grid[row][col + i].equals("S")){
@@ -87,7 +87,7 @@ public class Ship{
      * @param col Beginning column for ship placement.
      * @param orientation
      */
-    public void placeShip(Board board, int row, int col, double orientation){
+    public static void placeShip(Board board, int row, int col, double orientation){
     	if(orientation < 0.5){
     		for(int i = 0; i < shipSize; i++){
     			board.grid[row][col + i] = "S";
@@ -104,7 +104,7 @@ public class Ship{
      * 
      * @return The total number of ships on game board.
      */
-    public int getShipCount(){
+    public static int getShipCount(){
     	return shipCount;
     }
     
@@ -112,7 +112,7 @@ public class Ship{
      * 
      * @return The length of each ship.
      */
-    public int getShipSize(){
+    public static int getShipSize(){
     	return shipSize;
     }
     
@@ -120,13 +120,13 @@ public class Ship{
      * 
      * @return Total number of hits required to win a game.
      */
-    public int hitsRequired(){
+    public static int hitsRequired(){
     	return shipSize * shipCount;
     }
     
     
     
-    private int shipSize;
-    private int shipCount = 3;
+    private static int shipSize;
+    private static int shipCount = 3;
     
 }
