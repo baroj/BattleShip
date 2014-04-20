@@ -13,11 +13,11 @@ public class BattleShipGame {
 		takeTurns = false;
 		userBoard = new Board(boardSize);	//Construct user game board and place ships
 		System.out.println("Placing user ships on user's board:");
-		userBoard.createShip(userBoard, 4);
+		Ship.createShip(userBoard, 4);
 		userBoard.displayShips();
 		compBoard = new Board(boardSize);	//Construct computer game board and place ships
 		System.out.println("Placing computer ships on computer's board");
-		compBoard.createShip(compBoard, 4);
+		Ship.createShip(compBoard, 4);
 		compBoard.displayShips();
 		user = new UserPlayer();				//Construct user player object
         comp = new AIPlayer(skill);			//Construct computer player object
@@ -28,8 +28,8 @@ public class BattleShipGame {
 	 * Take turns firing until there is a winner.
 	 */
 	public void playGame(){        										
-		while ((user.getHitCount() < userBoard.hitsRequired()) &&	//while there is no winner!
-        		(comp.getHitCount() < compBoard.hitsRequired())){	//PLAY BATTLESHIP!
+		while ((user.getHitCount() < Ship.hitsRequired()) &&	//while there is no winner!
+        		(comp.getHitCount() < Ship.hitsRequired())){	//PLAY BATTLESHIP!
         	if(takeTurns){
         		System.out.println("USER'S TURN\nUSER'S GAMEBOARD:");		//display board
             	userBoard.displayBoard();
