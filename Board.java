@@ -2,8 +2,7 @@
  * 
  * @author Jonathan and Justin
  */
-public class Board extends Ship {
-	public static final boolean DEBUG = false; // what is this for? When I comment the code out nothing changes. Hm?
+public class Board{
 
 	/**
 	 * Constructs an empty game board.
