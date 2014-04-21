@@ -127,6 +127,6 @@ public class Ship{
     
     
     private static int shipSize;
-    private static int shipCount = 3;
+    private static int shipCount = 4;
     
 }
