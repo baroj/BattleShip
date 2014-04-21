@@ -9,8 +9,9 @@ public abstract class Player{
 		shotsFired = 0;
 		hits = 0;
 		fireAgain = false;
-		prevMove = new Move(-1, -1);	//moves initialized to invalid moves to prevent un-desired grid updates
-		nextMove = new Move(-1, -1);
+		prevMove = new Move(0, 0);	
+		prevMove2 = new Move(0, 0);
+		nextMove = new Move(0, 0);
 	}
 	
 	
@@ -28,6 +29,7 @@ public abstract class Player{
      */
     public void placeShot(Board board, Move nextMove){
 		 board.updateGrid(nextMove);
+		 prevMove2 = prevMove;
 		 prevMove = nextMove;
 		 if(prevMove.isHit(board)){		//if grid update resulted in a hit - increment hits count
 			 hits++;					
@@ -56,8 +58,9 @@ public abstract class Player{
     
     
     public Move prevMove;
+    public Move prevMove2;
     public Move nextMove;
-	public boolean fireAgain;
+    public boolean fireAgain;		
     private int shotsFired;
     public int hits;
 
