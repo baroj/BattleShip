@@ -60,7 +60,7 @@ public abstract class Player{
     public Move prevMove;
     public Move prevMove2;
     public Move nextMove;
-    public boolean fireAgain;		
+	public boolean fireAgain;		
     private int shotsFired;
     public int hits;
 
