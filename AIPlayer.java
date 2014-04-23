@@ -66,6 +66,7 @@ public class AIPlayer extends Player{
 						System.out.println("Placing random shot: " + nextMove.toString());
 						placeShot(board, nextMove);																				
 						break;
+						
 					case 1: //prevMove is hit, prevMove2 is not a hit
 						System.out.println("prevMove.isHit: " + prevMove.toString());
 						nextMove = BSStrategy.getLocalMove(prevMove, board);
@@ -100,7 +101,7 @@ public class AIPlayer extends Player{
 							if(nextMove.isValidMove(board)){
 								System.out.println("nextMove.isValid: " + nextMove.toString());
 								System.out.println("Placing next local move: " + nextMove.toString());
-								placeShot(board, nextMove);
+								placeShot(board,nextMove);
 							}
 							else{
 								while(!nextMove.isValidMove(board)){	//while move is not valid - get another move
@@ -120,7 +121,7 @@ public class AIPlayer extends Player{
 						if(nextMove.isValidMove(board)){
 							System.out.println("nextMove.isValid: " + nextMove.toString());
 							System.out.println("Placing next local move: " + nextMove.toString());
-							placeShot(board, nextMove);
+							placeShot(board,nextMove);
 						}
 						else{
 							System.out.println("Local move not valid, return to random move.");
