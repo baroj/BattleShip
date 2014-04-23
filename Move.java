@@ -52,7 +52,7 @@ public class Move {
 	}
 
 	/**
-	 * Convert x and y coordinates to a string with structure : "row, cplumn"
+	 * Convert x and y coordinates to a string with structure : "row, column"
 	 */
 	public String toString(){
 		return (row + 1) + ", " + (col + 1);
@@ -121,7 +121,7 @@ public class Move {
 	 * @return True if move coordinate is a hit.
 	 */
 	public Boolean isHit(Board board){
-		if(board.grid[this.getRow()][this.getCol()] == "!"){
+		if(board.grid[this.getRow()][this.getCol()] == 3){
 			return true;
 		}
 		else{
@@ -136,7 +136,7 @@ public class Move {
 	 * @return True if move coordinate is a missed shot.
 	 */
 	public Boolean isMiss(Board board){
-		if(board.grid[this.getRow()][this.getCol()] == "M"){
+		if(board.grid[this.getRow()][this.getCol()] == 2){
 			return true;
 		}
 		else{
