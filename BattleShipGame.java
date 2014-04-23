@@ -11,23 +11,33 @@ public class BattleShipGame {
 	 */
 	public BattleShipGame(int skill){
 		takeTurns = false;
-		userBoard = new Board(boardSize);	//Construct user game board and place ships
+		//Initialize two boards and apply to GUI
+		compBoard = new Board(boardSize);
+		userBoard = new Board(boardSize);
+        gui = new BattleShipGUI(userBoard, compBoard);
+        
+        //Create ships and display ship locations to console
 		System.out.println("Placing user ships on user's board:");
 		Ship.createShip(userBoard, 4);
-		userBoard.displayShips();
-		compBoard = new Board(boardSize);	//Construct computer game board and place ships
+		userBoard.displayShips();			
 		System.out.println("Placing computer ships on computer's board");
 		Ship.createShip(compBoard, 4);
 		compBoard.displayShips();
-		user = new UserPlayer();				//Construct user player object
-        comp = new AIPlayer(skill);			//Construct computer player object
+		
+		//Update GUI with ships
+		gui.updateUserGUI();
+		gui.updateCompGUI();
+		//Construct Player Objects
+		user = new UserPlayer();				
+        comp = new AIPlayer(skill);		       
 	}
 
 
 	/**
 	 * Take turns firing until there is a winner.
 	 */
-	public void playGame(){        										
+	public void playGame(){    
+		gui.displayGUI();
 		while ((user.getHitCount() < Ship.hitsRequired()) &&	//while there is no winner!
         		(comp.getHitCount() < Ship.hitsRequired())){	//PLAY BATTLESHIP!
         	if(takeTurns){
@@ -35,18 +45,22 @@ public class BattleShipGame {
             	userBoard.displayBoard();
             	System.out.println();
             	user.playerFire(userBoard);				//user selects shot
+            	
             	System.out.println("USER HAS FIRED!");
             	userBoard.displayBoard();
             	System.out.println("\n\n\n");
+            	gui.updateUserGUI();
             }
             else{
             	System.out.println("COMPUTER'S TURN\nCOMPUTER'S GAMEBOARD:");	//display board
             	compBoard.displayBoard();				
             	System.out.println();;				
             	comp.playerFire(compBoard);				//computer selects shot
+            	
             	System.out.println("COMPUTER HAS FIRED!");
             	compBoard.displayBoard();
             	System.out.println("\n\n\n");
+            	gui.updateCompGUI();
             }
             //Once a player has gone, switch whose turn it is
             takeTurns = !takeTurns;
@@ -71,9 +85,10 @@ public class BattleShipGame {
 
 
 
-
+	
 	public Board compBoard;
 	public Board userBoard;
+	private BattleShipGUI gui;
 	private Boolean takeTurns;
 	private UserPlayer user;
 	private AIPlayer comp;
