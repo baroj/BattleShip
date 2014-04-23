@@ -10,10 +10,10 @@ public class Board{
 	 */
 	public Board(int size) {
 		boardSize = size;
-		grid = new String[boardSize][boardSize];		
+		grid = new int[boardSize][boardSize];		
 		for (int r = 0; r < boardSize; r++) {
 			for (int c = 0; c < boardSize; c++) {
-				grid[r][c] = "~";
+				grid[r][c] = 0;
 			}
 		}
 	}
@@ -26,10 +26,14 @@ public class Board{
 	public void displayBoard() {
 		for (int r = 0; r < boardSize; r++) {
 			for (int c = 0; c < boardSize; c++) {
-				if (grid[r][c].equals("S")) {
-					System.out.print(" " + "~");
-				} else {
-					System.out.print(" " + grid[r][c]);
+				if(grid[r][c] == 3){
+					System.out.print(" !");
+				}
+				else if(grid[r][c] == 2){
+					System.out.print(" M");
+				}
+				else{
+					System.out.print(" ~");
 				}
 			}
 			System.out.println("");
@@ -44,7 +48,12 @@ public class Board{
 	public void displayShips() {
 		for (int r = 0; r < boardSize; r++) {
 			for (int c = 0; c < boardSize; c++) {
-				System.out.print(" " + grid[r][c]);
+				if(grid[r][c] == 1){
+					System.out.print(" S");
+				}
+				else{
+					System.out.print(" ~");
+				}
 			}
 			System.out.println("");
 		}
@@ -61,17 +70,17 @@ public class Board{
 	
 	/**
 	 * Updates grid with a new move.
+	 * @param gui 
 	 * @param move Move coordinates used to update grid.
 	 */
 	public void updateGrid(Move move){
 		if(move.isValidMove(this)){
-			if(grid[move.getRow()][move.getCol()].equals("S")){
-				grid[move.getRow()][move.getCol()] = "!";
+			if(grid[move.getRow()][move.getCol()] == 1){
+				grid[move.getRow()][move.getCol()] = 3;
 	   	 		System.out.println("~~~~~~~ HIT ~~~~~~~");
-
 			}
 			else{
-				grid[move.getRow()][move.getCol()] = "M";
+				grid[move.getRow()][move.getCol()] = 2;
 	   	 		System.out.println("~~~~~~~ MISS ~~~~~~~");
 
 			}
@@ -80,7 +89,7 @@ public class Board{
 
 
 
-	public String[][] grid;
+	public int[][] grid;
 	private static int boardSize;	//by setting this value in the constructor - we only need to call .length() once
 									//It's more efficient to do it this way
 }
