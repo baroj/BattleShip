@@ -70,5 +70,7 @@ public class UserPlayer extends Player{
 	private int row;
 	private int col;
 
+
+
 }
 
