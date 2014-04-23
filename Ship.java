@@ -63,7 +63,7 @@ public class Ship{
     public static boolean isValidShipPlacement(Board board, int row, int col, double orientation){
     	if (orientation < 0.5){	//if orientation is horizontal
     		for(int i = 0; i < shipSize; i++){   		
-    			if(board.grid[row][col + i].equals("S")){
+    			if(board.grid[row][col + i] == 1){
     				return false;
     			}
     		}
@@ -72,7 +72,7 @@ public class Ship{
     	
     	else{	//else orientation is vertical
     		for(int i = 0; i < shipSize; i++){   		
-    			if(board.grid[row + i][col].equals("S")){
+    			if(board.grid[row + i][col] == 1){
     				return false;
     			}
     		}
@@ -90,12 +90,12 @@ public class Ship{
     public static void placeShip(Board board, int row, int col, double orientation){
     	if(orientation < 0.5){
     		for(int i = 0; i < shipSize; i++){
-    			board.grid[row][col + i] = "S";
+    			board.grid[row][col + i] = 1;
     		}   	
     	}
     	else{
     		for (int i = 0; i < shipSize; i++) {
-    			board.grid[row + i][col] = "S";
+    			board.grid[row + i][col] = 1;
             }
     	}    	
     }
