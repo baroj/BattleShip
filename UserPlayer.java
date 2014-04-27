@@ -2,8 +2,7 @@
 import java.util.Scanner;
 
 /**
- *
- * @author Jonathan and Justin
+ * Handles all User moves and data.
  */
 public class UserPlayer extends Player{
 		
@@ -11,14 +10,13 @@ public class UserPlayer extends Player{
 	 * Construct new player object and initialize values.
 	 */
 	public UserPlayer(){
-		System.out.println("In UserPlayer() Constructor");
 		input = new Scanner(System.in);
 		row = -1;
 		col = -1;
 	}
 	
 	/**
-	 * Get next move from user, check validity of next move, and update grid.
+	 * Get next move from user, check validity of next move, and update grid - console version.
 	 * @param board Game board that the user is firing at.
 	 */
 	public void playerFire(Board board){
@@ -47,7 +45,7 @@ public class UserPlayer extends Player{
 
     
 	   /**
-     * Requests and stores a valid row from user input.
+     * Requests and stores a valid row from user input - console version.
      */
     public void getUserRow(){
    	 	System.out.println("Select a row to fire in (1 -> " + Board.getSize() + ") : ");
@@ -56,21 +54,16 @@ public class UserPlayer extends Player{
     
     
     /**
-     * Requests and stores a valid column from user input.
+     * Requests and stores a valid column from user input - console version.
      */
     public void getUserColumn(){
     	 System.out.println("Select a column to fire in ((1 -> " + Board.getSize() + ") : ");
     	 col = input.nextInt();
     }
-    
-    
-    
+       
     
 	private static Scanner input;
 	private int row;
 	private int col;
-
-
-
 }
 
