@@ -3,7 +3,7 @@
 
 
 /**
- * Class for handling moves 
+ * Class for handling moves. 
  * @author Jonathan and Justin
  *
  */
