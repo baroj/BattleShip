@@ -1,14 +1,13 @@
 /**
- * Abstract Player class containing common member methods and fields.
- * @author Jonathan and Justin
+ * Abstract Player class containing common member methods and fields to all Battle Ship players.
  */
 public abstract class Player{
 	
+	/**
+	 * Initialize all Player fields.
+	 */
 	public Player(){
-		System.out.println("In Abstract Player() Constructor");
-		shotsFired = 0;
-		hits = 0;
-		fireAgain = false;
+		fireAgain = false;	//can be used to adjust game settings, allowing player to shoot until missing
 		prevMove = new Move(0, 0);	
 		prevMove2 = new Move(0, 0);
 		nextMove = new Move(0, 0);
@@ -20,8 +19,7 @@ public abstract class Player{
 	 * @param board Game board that the user is firing at.
 	 */
     public abstract void playerFire(Board board);
-    
-    
+       
     /**
      * Sends update to board's grid and increments player's hit counter and shotsFired counter accordingly.
      * @param board Game board shot is being placed on.
@@ -30,20 +28,22 @@ public abstract class Player{
     public void placeShot(Board board, Move nextMove){
 		 board.updateGrid(nextMove);
 		 prevMove2 = prevMove;
-		 prevMove = nextMove;
-		 if(prevMove.isHit(board)){		//if grid update resulted in a hit - increment hits count
-			 hits++;					
-		 }
-		 shotsFired++;
+		 prevMove = nextMove;					
 		 fireAgain = false;
     }
     
-    
     /**
-     * Gets current hit count.
-     * @return Total number of hits.
+     * @return Total number of hits on ships.
      */
-    public int getHitCount(){
+    public int getHitCount(Board board){
+    	int hits = 0;
+    	for(int r = 0; r < Board.getSize(); r++){
+    		for(int c = 0; c < Board.getSize(); c++){
+    			if(board.grid[r][c] == 3){
+    				hits++;
+    			}
+    		}
+    	}
     	return hits;
     }
     
@@ -52,7 +52,15 @@ public abstract class Player{
      * 
      * @return Total number of shots fired by player.
      */
-    public int getShotsFired(){
+    public int getShotsFired(Board board){
+    	int shotsFired = 0;
+    	for(int r = 0; r < Board.getSize(); r++){
+    		for(int c = 0; c < Board.getSize(); c++){
+    			if(board.grid[r][c] == 3 || board.grid[r][c] == 2){
+    				shotsFired++;
+    			}
+    		}
+    	}
     	return shotsFired;
     }
     
@@ -61,8 +69,6 @@ public abstract class Player{
     public Move prevMove2;
     public Move nextMove;
 	public boolean fireAgain;		
-    private int shotsFired;
-    public int hits;
 
 }
 
