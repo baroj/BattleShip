@@ -1,7 +1,5 @@
 /**
  *Class responsible for generating ships and randomly placing them on the map.
- *
- * @author Jonathan and Justin
  */
 public class Ship{
 
@@ -11,8 +9,6 @@ public class Ship{
      * @param size The size of the game board being used.
      */
     public static void createShip(Board board, int size) {
-    	//I changed it to 3 ships to simplify things
-    	//******************************************
     	shipSize = size;
         for (int j = 0; j < shipCount; j++) {
         	double orientation = Math.random();	//Random number determines whether ship is placed horizontally or vertically    	
@@ -51,7 +47,6 @@ public class Ship{
         }
     }
 
-    
     /**
      * Checks to see if this a valid ship selection.
      * @param board Game board being checked.
@@ -60,7 +55,7 @@ public class Ship{
      * @param orientation Random number that determines horizontal vs. vertical orientation
      * @return True if no ship exists at this location.
      */
-    public static boolean isValidShipPlacement(Board board, int row, int col, double orientation){
+    private static boolean isValidShipPlacement(Board board, int row, int col, double orientation){
     	if (orientation < 0.5){	//if orientation is horizontal
     		for(int i = 0; i < shipSize; i++){   		
     			if(board.grid[row][col + i] == 1){
@@ -87,7 +82,7 @@ public class Ship{
      * @param col Beginning column for ship placement.
      * @param orientation
      */
-    public static void placeShip(Board board, int row, int col, double orientation){
+    private static void placeShip(Board board, int row, int col, double orientation){
     	if(orientation < 0.5){
     		for(int i = 0; i < shipSize; i++){
     			board.grid[row][col + i] = 1;
@@ -102,29 +97,11 @@ public class Ship{
     
     /**
      * 
-     * @return The total number of ships on game board.
-     */
-    public static int getShipCount(){
-    	return shipCount;
-    }
-    
-    /**
-     * 
-     * @return The length of each ship.
-     */
-    public static int getShipSize(){
-    	return shipSize;
-    }
-    
-    /**
-     * 
      * @return Total number of hits required to win a game.
      */
     public static int hitsRequired(){
     	return shipSize * shipCount;
     }
-    
-    
     
     private static int shipSize;
     private static int shipCount = 4;
