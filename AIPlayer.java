@@ -1,28 +1,16 @@
-
-
 /**
  * Constructs the computer user and handles computer moves.
- * @author Jonathan and Justin
- *
  */
 public class AIPlayer extends Player{
 
 	/**
-	 * Constructor creates computer player and initializes values.
+	 * Constructor creates computer player and initializes fields.
 	 * @param s The skill level being applied to computer player.
 	 */
 	public AIPlayer(int s){
 		skillLevel = s;
-		System.out.println("Computer player constructed.");
-		System.out.print("Skill level chosen: ");
-		if(skillLevel==0){
-			System.out.println("Beginner");
-		}
-		else{
-			System.out.println("Adanced");
-		}
+	
 	}
-
 
 	/**
 	 * Calculates the next computer move based off chosen skill level and artificial intelligence.
@@ -42,7 +30,7 @@ public class AIPlayer extends Player{
 		//SKILL LEVEL ADVANCED - computer utilizes battleship strategies
 		else{
 			
-			if(getShotsFired() == 0){	//If first shot of game, select shot at random
+			if(getShotsFired(board) == 0){	//If first shot of game, select shot at random
 				System.out.println("First shot of game.");
 				nextMove = BSStrategy.getRandomMove();
 				while(!nextMove.isValidMove(board)){
@@ -59,55 +47,55 @@ public class AIPlayer extends Player{
 				switch(onStreak(board)){
 					
 					case 0:	//prevMove and prevMove2 are not hits
-						System.out.println("Case 0: No previous moves to work with.");
+						//System.out.println("Case 0: No previous moves to work with.");
 						while(!nextMove.isValidMove(board)){	//while move is not valid - get another move
 							nextMove = BSStrategy.getRandomMove();
 						}
-						System.out.println("Placing random shot: " + nextMove.toString());
+						//System.out.println("Placing random shot: " + nextMove.toString());
 						placeShot(board, nextMove);																				
 						break;
 						
 					case 1: //prevMove is hit, prevMove2 is not a hit
-						System.out.println("prevMove.isHit: " + prevMove.toString());
+						//System.out.println("prevMove.isHit: " + prevMove.toString());
 						nextMove = BSStrategy.getLocalMove(prevMove, board);
 						//if local move is a valid move - place it on the grid
 						if(nextMove.isValidMove(board)){
-							System.out.println("nextMove.isValid: " + nextMove.toString());
-							System.out.println("Placing next local move: " + nextMove.toString());
+							//System.out.println("nextMove.isValid: " + nextMove.toString());
+							//System.out.println("Placing next local move: " + nextMove.toString());
 							placeShot(board, nextMove);
 						}
 						else{
-							System.out.println("Local move not valid, return to random move.");
+							//System.out.println("Local move not valid, return to random move.");
 							while(!nextMove.isValidMove(board)){	//while move is not valid - get another move
 								nextMove = BSStrategy.getRandomMove();
 							}
-							System.out.println("Placing random shot: " + nextMove.toString());
+							//System.out.println("Placing random shot: " + nextMove.toString());
 							placeShot(board, nextMove);	
 						}
 						break;
 						
 						
 					case 2:	//prevMove and prevMove2 are both hits
-						System.out.println("prevMove.isHit: " + prevMove.toString());
-						System.out.println(" && prevMove2.isHit: " + prevMove2.toString());
+						//System.out.println("prevMove.isHit: " + prevMove.toString());
+						//System.out.println(" && prevMove2.isHit: " + prevMove2.toString());
 						nextMove = BSStrategy.continueStreak(prevMove, board, BSStrategy.getStreakDirection(prevMove, prevMove2));
 						if(nextMove.isValidMove(board)){
-							System.out.println("nextMove.isValid: " + nextMove.toString());
-							System.out.println("Placing next local move: " + nextMove.toString());
+							//System.out.println("nextMove.isValid: " + nextMove.toString());
+							//System.out.println("Placing next local move: " + nextMove.toString());
 							placeShot(board, nextMove);
 						}
 						else{
 							nextMove = BSStrategy.continueStreak(prevMove2, board, BSStrategy.getStreakDirection(prevMove2, prevMove));
 							if(nextMove.isValidMove(board)){
-								System.out.println("nextMove.isValid: " + nextMove.toString());
-								System.out.println("Placing next local move: " + nextMove.toString());
+								//System.out.println("nextMove.isValid: " + nextMove.toString());
+								//System.out.println("Placing next local move: " + nextMove.toString());
 								placeShot(board,nextMove);
 							}
 							else{
 								while(!nextMove.isValidMove(board)){	//while move is not valid - get another move
 									nextMove = BSStrategy.getRandomMove();
 								}
-								System.out.println("Placing random shot: " + nextMove.toString());
+								//System.out.println("Placing random shot: " + nextMove.toString());
 								placeShot(board, nextMove);	
 							}
 							
@@ -115,20 +103,20 @@ public class AIPlayer extends Player{
 						break;
 						
 					case 3:	//prevMove2 is hit, prevMove1 is not a hit	
-						System.out.println("prevMove2.isHit: " + prevMove2.toString());
+						//System.out.println("prevMove2.isHit: " + prevMove2.toString());
 						nextMove = BSStrategy.getLocalMove(prevMove2, board);
 						//if local move is a valid move - place it on the grid
 						if(nextMove.isValidMove(board)){
-							System.out.println("nextMove.isValid: " + nextMove.toString());
-							System.out.println("Placing next local move: " + nextMove.toString());
+							//System.out.println("nextMove.isValid: " + nextMove.toString());
+							//System.out.println("Placing next local move: " + nextMove.toString());
 							placeShot(board,nextMove);
 						}
 						else{
-							System.out.println("Local move not valid, return to random move.");
+							//System.out.println("Local move not valid, return to random move.");
 							while(!nextMove.isValidMove(board)){	//while move is not valid - get another move
 								nextMove = BSStrategy.getRandomMove();
 							}
-							System.out.println("Placing random shot: " + nextMove.toString());
+							//System.out.println("Placing random shot: " + nextMove.toString());
 							placeShot(board, nextMove);	
 						}
 				
@@ -141,11 +129,6 @@ public class AIPlayer extends Player{
 		}
 	}
 
-
-    
-    
-   
-    
     /**
      * 
      * @param board Game board being played on.
@@ -155,35 +138,27 @@ public class AIPlayer extends Player{
      * 			3 = prevMove2.isHit(board)
      * 			0 = No previous hits to work with.
      */
-    public int onStreak(Board board){
+    private int onStreak(Board board){
     	if(prevMove.isHit(board) && !prevMove2.isHit(board)){
-    		System.out.println("prevMove.isHit(board) && !prevMove2.isHit(board)");
+    		//System.out.println("prevMove.isHit(board) && !prevMove2.isHit(board)");
 			return 1;
     	}
     	else if(prevMove.isHit(board) && prevMove2.isHit(board)){
-    		System.out.println("prevMove.isHit(board) && prevMove2.isHit(board)");
+    		//System.out.println("prevMove.isHit(board) && prevMove2.isHit(board)");
     		return 2;
     	}
     	else if(prevMove2.isHit(board)){	
-    		System.out.println("prevMove2.isHit(board) && !prevMove.isHit(board)");
+    		//System.out.println("prevMove2.isHit(board) && !prevMove.isHit(board)");
     		return 3;
     	}
     	else{
-    		System.out.println("No previous hits to work with.");
+    		//System.out.println("No previous hits to work with.");
     		return 0;
     	}
     }
     
+
     
-    
-    
-    
-   // private int localMoveCounter;	--> need way to check for another localMove if the first localMove is a miss
-   //we want the computer to exhaust all 4 corners of the last hit before moving onto random shot selection
 	private int skillLevel;
-
-	//private Move prevMove3;		can be used to increase intelligence.
-	//private Move prevMove4;
-
 
 }
