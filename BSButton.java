@@ -1,20 +1,19 @@
 
-//Justin Johnson
-//Z23136514
 
 import javax.swing.JButton;
 
 /**
- * A class for creating a TicTacToeButton - extends JButton.
- * @author Justin
+ * A class for creating a BSButton Objects - extends JButton.
+ * BSButton is a custom JButton that is used in Battle Ship game.
+ * 
  *
  */
 public class BSButton extends JButton {
 	
 
 	/**
-	 * Constructs a TicTacToeButton object.
-	 * Sets buttonStatus to 0.
+	 * Constructs a BSButton object.
+	 * Initializes buttonStatus to 0.
 	 */
 	public BSButton(){
 		b = new JButton();	
@@ -27,13 +26,12 @@ public class BSButton extends JButton {
 	 * @return buttonStatus - integer value used to determine who has selected current button.
 	 */
 	public int getStatus(){
-		return this.buttonStatus;
+		return buttonStatus;
 	}
 	
 	/**
-	 * Set button status.
+	 * Set button status to represent the various states possible for a Battle Ship cell.
 	 * @param s - integer value used to set current button's status.
-	 * Distinguishes who has selected the current button.
 	 */
 	public void setStatus(int s){
 		buttonStatus = s;
@@ -42,7 +40,7 @@ public class BSButton extends JButton {
 	
 	/**
 	 * Tests button object to see if it is a valid move.
-	 * @return True if button has not yet been selected by user or computer.
+	 * @return True if button has not yet been selected.
 	 */
 	public Boolean isValidMove(){
 		if(getStatus() == 0 || getStatus() == 1){
@@ -53,6 +51,8 @@ public class BSButton extends JButton {
 		}
 	}
 	
+	
+
 	
 	private static final long serialVersionUID = 1L;
 	private JButton b;			
