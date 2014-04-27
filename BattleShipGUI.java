@@ -1,46 +1,55 @@
-import java.awt.Color;
-import java.awt.Graphics2D;
 import java.awt.GridLayout;
-import java.awt.List;
-import java.awt.Point;
-import java.awt.Rectangle;
-import java.awt.Shape;
-import java.awt.geom.Rectangle2D;
-import java.util.ArrayList;
-
-import javax.swing.Icon;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.SwingConstants;
-
-
-public class BattleShipGUI {
 
 /**
  * Class is responsible for constructing two maps and populating them with appropriate data.
  * Class contains methods for updating GUI with new map data.
- * @param user Board object containing user's data.
- * @param comp Board object containing computer's data.
  */
+public class BattleShipGUI {
+	
+	/**
+	 * Constructor initializes all GUI fields.
+	 * @param user Board object containing user's data.
+	 * @param comp Board object containing computer's data.
+	 */
 	public BattleShipGUI(Board user, Board comp){
+		myTurn = false;	
 		userBoard = user;
 		compBoard = comp;
+		userButtons = new BSButton[Board.getSize()][Board.getSize()];
+		compButtons = new BSButton[Board.getSize()][Board.getSize()];
+		b = new Border();
+		border = new JLabel[Board.getSize()];
 		gameBoard = new JFrame("Battle Ship!");
 		gameBoard.setBounds(400,75,400,650);
 		gameBoard.setResizable(false);
 		gameBoard.setLayout(new GridLayout(17,8));
 		gameBoard.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		userGrid = new BSButton[Board.getSize()][Board.getSize()];
-		compGrid = new BSButton[Board.getSize()][Board.getSize()];
-		b = new Border();
-		border = new JLabel[Board.getSize()];
+
+		
 		
 		//draw user grid
 		for(int r = 0; r < Board.getSize(); r++){
 			for(int c = 0; c < Board.getSize(); c++){
-				userGrid[r][c] = new BSButton();
-				userGrid[r][c].setText("~");
-				gameBoard.add(userGrid[r][c]);
+				userButtons[r][c] = new BSButton();
+				userButtons[r][c].setIcon(new javax.swing.ImageIcon("Water.gif"));
+				userButtons[r][c].addActionListener(new ActionListener(){	
+					public void actionPerformed(ActionEvent e){
+						while(((BSButton) e.getSource()).isValidMove()){	//while button clicked is valid move													
+							if(((BSButton) e.getSource()).getStatus() == 0){
+								((BSButton) e.getSource()).setStatus(2);
+							}
+							else if(((BSButton) e.getSource()).getStatus() == 1){
+								((BSButton) e.getSource()).setStatus(3);							
+							}	
+							setTurn(false);
+						}				
+					}
+				});				
+				gameBoard.add(userButtons[r][c]);
 			}
 		}
 
@@ -53,9 +62,9 @@ public class BattleShipGUI {
 		//draw computer grid
 		for(int r = 0; r < Board.getSize(); r++){
 			for(int c = 0; c < Board.getSize(); c++){
-				compGrid[r][c] = new BSButton();
-				compGrid[r][c].setText("~");
-				gameBoard.add(compGrid[r][c]);
+				compButtons[r][c] = new BSButton();
+				compButtons[r][c].setIcon(new javax.swing.ImageIcon("Water.gif"));
+				gameBoard.add(compButtons[r][c]);
 			}
 		}
 	}
@@ -68,10 +77,10 @@ public class BattleShipGUI {
 		for(int r = 0; r < Board.getSize(); r++){
 			for(int c = 0; c < Board.getSize(); c++){
 				if(userBoard.grid[r][c] == 2){
-					userGrid[r][c].setText("M");
+					userButtons[r][c].setIcon(new javax.swing.ImageIcon("Miss.gif"));
 				}
 				else if(userBoard.grid[r][c] == 3){
-					userGrid[r][c].setText("!");
+					userButtons[r][c].setIcon(new javax.swing.ImageIcon("Hit.gif"));
 				}
 			}
 		}
@@ -86,13 +95,13 @@ public class BattleShipGUI {
 		for(int r = 0; r < Board.getSize(); r++){
 			for(int c = 0; c < Board.getSize(); c++){
 				if(compBoard.grid[r][c] == 1){
-					compGrid[r][c].setText("S");
+					compButtons[r][c].setIcon(new javax.swing.ImageIcon("Ship.gif"));
 				}
 				else if(compBoard.grid[r][c] == 2){
-					compGrid[r][c].setText("M");
+					compButtons[r][c].setIcon(new javax.swing.ImageIcon("Miss.gif"));
 				}
 				else if(compBoard.grid[r][c] == 3){
-					compGrid[r][c].setText("!");
+					compButtons[r][c].setIcon(new javax.swing.ImageIcon("Hit.gif"));
 				}
 			}
 		}
@@ -105,14 +114,40 @@ public class BattleShipGUI {
 		gameBoard.setVisible(true);
 	}
 	
+	/**
+	 * Closes GUI.
+	 */
+	public void closeGUI(){
+		gameBoard.setVisible(false);
+		gameBoard.getDefaultCloseOperation();
+	}
+	
+	/**
+	 * Change turns to turn off action listener.
+	 */
+	public void setTurn(Boolean n){
+		myTurn = n;
+	}
+	
+	public boolean getTurn(){
+		return myTurn;
+	}
+	
+	/**
+	 * 
+	 * @return 2D array of BSButtons.
+	 */
+	public BSButton[][] getUserButtons(){
+		return userButtons;	
+	}
 	
 	
-
+	private boolean myTurn;
 	private Border b;
 	private Board userBoard;
 	private Board compBoard;
-	private BSButton[][] userGrid;
-	private BSButton[][] compGrid;
+	private BSButton[][] userButtons;
+	private BSButton[][] compButtons;
 	private JLabel[] border;
 	private JFrame gameBoard;
 }
