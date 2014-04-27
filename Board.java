@@ -1,6 +1,6 @@
 /**
- * 
- * @author Jonathan and Justin
+ * Board class contains all data regarding player moves and methods to handle the data.
+ * Board class is the MODEL of the Model/View/Controller Architecture.
  */
 public class Board{
 
@@ -20,17 +20,17 @@ public class Board{
 
 
 	/**
-	 * Display board to console
+	 * Display board to console for debugging purposes.
 	 * @param board Array used to represent game board
 	 */
 	public void displayBoard() {
 		for (int r = 0; r < boardSize; r++) {
 			for (int c = 0; c < boardSize; c++) {
-				if(grid[r][c] == 3){
-					System.out.print(" !");
-				}
-				else if(grid[r][c] == 2){
+				if (grid[r][c] == 2){	//if field is a miss
 					System.out.print(" M");
+				}
+				else if(grid[r][c] == 3){//if field is a hit
+					System.out.print(" !");
 				}
 				else{
 					System.out.print(" ~");
@@ -49,14 +49,53 @@ public class Board{
 		for (int r = 0; r < boardSize; r++) {
 			for (int c = 0; c < boardSize; c++) {
 				if(grid[r][c] == 1){
-					System.out.print(" S");
+					System.out.println(" S");
 				}
 				else{
-					System.out.print(" ~");
+					System.out.println(" ~");
 				}
 			}
 			System.out.println("");
 		}
+	}
+
+	/**
+	 * Updates Board's grid with a new move.
+	 * @param move Move coordinates used to update grid.
+	 */
+	public void updateGrid(Move move){
+		if(move.isValidMove(this)){
+			if(grid[move.getRow()][move.getCol()] == 1){
+				grid[move.getRow()][move.getCol()] = 3;
+			}
+			else{
+				grid[move.getRow()][move.getCol()] = 2;
+			}
+		}
+	}
+	
+	/**
+	 * Update the Board's grid using the buttonStatus values.
+	 * @param buttons
+	 */
+	public void syncBoard(BSButton[][] buttons){
+		for(int r = 0; r < boardSize; r++){
+			for(int c = 0; c < boardSize; c++){
+				grid[r][c] = buttons[r][c].getStatus();
+			}
+		}	
+	}
+	
+	/**
+	 * Update 2D array of buttons' statuses using board's grid values.
+	 * @param buttons 2D array of buttons being updated.
+	 */
+	public void syncButtons(BSButton[][] buttons){
+		for(int r = 0; r < boardSize; r++){
+			for(int c = 0; c < boardSize; c++){
+				buttons[r][c].setStatus(grid[r][c]);
+			}
+		}	
 	}
 
 	/**
@@ -66,30 +105,8 @@ public class Board{
 	public static int getSize(){
 		return boardSize;
 	}
+
 	
-	
-	/**
-	 * Updates grid with a new move.
-	 * @param gui 
-	 * @param move Move coordinates used to update grid.
-	 */
-	public void updateGrid(Move move){
-		if(move.isValidMove(this)){
-			if(grid[move.getRow()][move.getCol()] == 1){
-				grid[move.getRow()][move.getCol()] = 3;
-	   	 		System.out.println("~~~~~~~ HIT ~~~~~~~");
-			}
-			else{
-				grid[move.getRow()][move.getCol()] = 2;
-	   	 		System.out.println("~~~~~~~ MISS ~~~~~~~");
-
-			}
-		}
-	}
-
-
-
 	public int[][] grid;
-	private static int boardSize;	//by setting this value in the constructor - we only need to call .length() once
-									//It's more efficient to do it this way
+	private static int boardSize;
 }
