@@ -25,7 +25,7 @@ public class Border implements Icon {
 	public void paintIcon(Component c, Graphics g, int x, int y) {
 		  Graphics2D g2 = (Graphics2D) g;
 	      //Rectangle2D rect = new Rectangle2D.Double(60, 70, getIconHeight() , getIconWidth());
-	      g2.setColor(Color.GREEN);
+	      g2.setColor(Color.BLACK);
 	      g2.fillRect(0, 0, getIconWidth(), getIconHeight());
 	      
 	}
