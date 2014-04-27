@@ -1,7 +1,7 @@
+import java.util.Random;
+
 /**
- * Class for constructing new BattleShip games, playing games, and displaying end of game results.
- * @author Jonathan and Justin
- *
+ * Constructs Battle Ship game and handles all game options.
  */
 public class BattleShipGame {
 
@@ -10,26 +10,30 @@ public class BattleShipGame {
 	 * @param skill The skill level to be applied to Computer Player AI
 	 */
 	public BattleShipGame(int skill){
-		takeTurns = false;
+		//Randomly determine who goes first (as if coin flip)
+		generator = new Random();
+		takeTurns = generator.nextBoolean();
+		
 		//Initialize two boards and apply to GUI
 		compBoard = new Board(boardSize);
 		userBoard = new Board(boardSize);
         gui = new BattleShipGUI(userBoard, compBoard);
         
-        //Create ships and display ship locations to console
-		System.out.println("Placing user ships on user's board:");
-		Ship.createShip(userBoard, 4);
-		userBoard.displayShips();			
-		System.out.println("Placing computer ships on computer's board");
+        //Create and place ships on maps
+		Ship.createShip(userBoard, 4);	
 		Ship.createShip(compBoard, 4);
-		compBoard.displayShips();
 		
-		//Update GUI with ships
+		//Update BSButton status' with ship locations
+		userBoard.syncButtons(gui.getUserButtons());
+		
+		//Update GUIs with ships
 		gui.updateUserGUI();
 		gui.updateCompGUI();
+		
 		//Construct Player Objects
 		user = new UserPlayer();				
-        comp = new AIPlayer(skill);		       
+        comp = new AIPlayer(skill);		 
+
 	}
 
 
@@ -38,28 +42,26 @@ public class BattleShipGame {
 	 */
 	public void playGame(){    
 		gui.displayGUI();
-		while ((user.getHitCount() < Ship.hitsRequired()) &&	//while there is no winner!
-        		(comp.getHitCount() < Ship.hitsRequired())){	//PLAY BATTLESHIP!
-        	if(takeTurns){
-        		System.out.println("USER'S TURN\nUSER'S GAMEBOARD:");		//display board
-            	userBoard.displayBoard();
-            	System.out.println();
-            	user.playerFire(userBoard);				//user selects shot
-            	
-            	System.out.println("USER HAS FIRED!");
-            	userBoard.displayBoard();
-            	System.out.println("\n\n\n");
+		
+		while ((user.getHitCount(compBoard) < Ship.hitsRequired()) &&	//while there is no winner!
+        		(comp.getHitCount(userBoard) < Ship.hitsRequired())){	//PLAY BATTLESHIP!
+			
+        	if(takeTurns){	//USER'S TURN
+        		gui.setTurn(true);          	
+            	while(gui.getTurn()){
+            		try {
+            		    Thread.sleep(750);	
+            		} catch(InterruptedException ex) {
+            		    Thread.currentThread().interrupt();
+            		}
+            		System.out.println("Waiting on User...");
+            	}           	
+            	userBoard.syncBoard(gui.getUserButtons());
             	gui.updateUserGUI();
             }
-            else{
-            	System.out.println("COMPUTER'S TURN\nCOMPUTER'S GAMEBOARD:");	//display board
-            	compBoard.displayBoard();				
-            	System.out.println();;				
+        	
+            else{			//COMPUTER'S TURN							
             	comp.playerFire(compBoard);				//computer selects shot
-            	
-            	System.out.println("COMPUTER HAS FIRED!");
-            	compBoard.displayBoard();
-            	System.out.println("\n\n\n");
             	gui.updateCompGUI();
             }
             //Once a player has gone, switch whose turn it is
@@ -73,18 +75,20 @@ public class BattleShipGame {
 	/**
 	 * Display end of game results.
 	 */
-	public String gameOver(){
-		if(user.getHitCount() < comp.getHitCount()){
-			return "Sorry, but you've lost!.\nComputer fired " + comp.getShotsFired();
+	public String getWinner(){
+		if(user.getHitCount(userBoard) < comp.getHitCount(compBoard)){
+			return "Computer Wins!!! Computer fired " + comp.getShotsFired(compBoard) + " shots!";
 		}
 		else{
-			return "Congratulations, You've Won!!\nYou fired " + user.getShotsFired();
+			return "You Win!!! You fired " + user.getShotsFired(userBoard) + " shots!";
 			
 		}
 	}
 
 
-
+	public void closeOldGame(){
+		gui.closeGUI();
+	}
 	
 	public Board compBoard;
 	public Board userBoard;
@@ -93,4 +97,5 @@ public class BattleShipGame {
 	private UserPlayer user;
 	private AIPlayer comp;
 	private final int boardSize = 8;
+	private Random generator;
 }
