@@ -1,28 +1,43 @@
-import java.util.Scanner;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
-/**
- *
- * @author Jonathan
- */
 public class Tester{
 
     public static void main(String[] arg) {
-    	Scanner in = new Scanner(System.in);
-        System.out.println("Please choose your skill level (0 for beginnger/1 for advanced)");
-        int skill = in.nextInt();
-        BattleShipGame battleGame = new BattleShipGame(skill);
-        System.out.println("\n\n");
-           
-        battleGame.playGame();        
+
+    	
+    	BattleShipGame newGame;
+    	ExitMenu exit;
+        StartMenu start = new StartMenu();
         
-        System.out.println(battleGame.gameOver());
-        in.close();
+        do{	
+    		start.displayMenu();
+    	}while(!start.close && !start.play);  
+        start.disableMenu();
+        
+        //Only enter game play if user selects Play on Start Menu
+        if(start.play){
+          
+        //while user chooses to continue playing
+        	do{
+        		newGame = new BattleShipGame(start.getSkill());
+        		newGame.playGame();
+        	
+        		exit = new ExitMenu(newGame.getWinner());
+        	
+        		//Once game play has ended - display exit menu
+        		do{	       			
+        			exit.displayMenu();
+        		}while(!exit.close && !exit.play);
+        		exit.disableMenu();
+        		newGame.closeOldGame();
+        
+        		//if user selects Play Again in exit menu - new game will start	
+        	}while(exit.play);
+        
+        	
+        }
+        
+        System.exit(0);	//force close any threads left running
     }
 
 }
